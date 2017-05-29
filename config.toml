@@ -1,4 +1,4 @@
-baseurl = "http://nimahejazi.org/testblog2/"
+baseurl = "http://nimahejazi.org/blog/"
 languageCode = "en-us"
 title = "Nima Hejazi's blog"
 theme = "hugo-future-imperfect"
