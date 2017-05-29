@@ -1,11 +1,11 @@
 +++
-date: "2016-05-25"
-author: "Nima Hejazi"
-title: "how to love a tool - atom"
-summary: "Discussion of the new Atom text editor"
-categories: [ "editors", "productivity", "computing" ]
-comments: true
-status: final
+date = "2016-05-25"
+author = "Nima Hejazi"
+title = "how to love a tool - atom"
+summary = "Discussion of the new Atom text editor"
+categories = [ "editors", "productivity", "computing" ]
+comments = true
+status = final
 
 +++
 

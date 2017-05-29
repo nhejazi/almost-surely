@@ -1,11 +1,11 @@
 +++
-date: "2016-02-01"
-author: "Nima Hejazi"
-title: "purpose"
-summary: ""
-categories: [ ]
-comments: false
-status: final
+date = "2016-02-01"
+author = "Nima Hejazi"
+title = "purpose"
+summary = ""
+categories = [ ]
+comments = false
+status = "final"
 
 +++
 

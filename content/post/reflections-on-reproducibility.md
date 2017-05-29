@@ -1,12 +1,12 @@
 +++
-date: "2017-06-29"
-author: "Nima Hejazi"
-title: "reflections on reproducibility"
-summary: ""
-tags: [ "reproducibility", "open science", "peer review" ]
-comments: false
-status: draft
-published: false
+date = "2017-06-29"
+author = "Nima Hejazi"
+title = "reflections on reproducibility"
+summary = ""
+categories = [ "reproducibility", "open science", "peer review" ]
+comments = false
+status = "draft"
+published = false
 
 +++
 

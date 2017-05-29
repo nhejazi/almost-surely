@@ -1,10 +1,10 @@
 +++
-date: "2016-02-22"
-author: "Nima Hejazi"
-title: "it's all in a name"
-summary: ""
-comments: false
-status: final
+date = "2016-02-22"
+author = "Nima Hejazi"
+title = "it's all in a name"
+summary = ""
+comments = false
+status = final
 
 +++
 

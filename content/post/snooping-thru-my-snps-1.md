@@ -1,11 +1,11 @@
 +++
-date: "2016-03-22"
-author: "Nima Hejazi"
-title: "snooping through my SNPs, part 1"
-summary: "Exploratory analysis of my SNP profile"
-categories: [ "personal genomics", "bioconductor", "23andMe" ]
-comments: true
-status: final
+date = "2016-03-22"
+author = "Nima Hejazi"
+title = "snooping through my SNPs, part 1"
+summary = "Exploratory analysis of my SNP profile"
+categories = [ "personal genomics", "bioconductor", "23andMe" ]
+comments = true
+status = "final"
 
 +++
 

@@ -1,11 +1,11 @@
 +++
-date: "2016-05-12"
-author: "Nima Hejazi"
-title: "how to love a tool - gitsome"
-summary: "Discussion of the Gitsome CLI, based on the Xonsh shell"
-categories: [ "CLI", "productivity", "computing" ]
-comments: true
-status: final
+date = "2016-05-12"
+author = "Nima Hejazi"
+title = "how to love a tool - gitsome"
+summary = "Discussion of the Gitsome CLI, based on the Xonsh shell"
+categories = [ "CLI", "productivity", "computing" ]
+comments = true
+status = final
 
 +++
 

@@ -1,11 +1,11 @@
 +++
-date: "2016-06-25"
-author: "Nima Hejazi"
-title: "a shell called xonsh"
-summary: "Discussion of the new Python-based Xonsh shell"
-categories: [ "shells", "productivity", "computing" ]
-comments: true
-status: final
+date = "2016-06-25"
+author = "Nima Hejazi"
+title = "a shell called xonsh"
+summary = "Discussion of the new Python-based Xonsh shell"
+categories = [ "shells", "productivity", "computing" ]
+comments = true
+status = "final"
 
 +++
 

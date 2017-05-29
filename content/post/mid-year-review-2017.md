@@ -1,12 +1,12 @@
 +++
-date: "2017-06-01"
-author: "Nima Hejazi"
-title: "2017 - a mid-year review"
-summary: "Review of productivity and graduate school in the first half of 2017"
-categories: [ "statistics", "graduate school", "productivity" ]
-comments: false
-status: draft
-published: false
+date = "2017-06-01"
+author = "Nima Hejazi"
+title = "2017 - a mid-year review"
+summary = "Review of productivity and graduate school in the first half of 2017"
+categories = [ "statistics", "graduate school", "productivity" ]
+comments = false
+status = "draft"
+published = false
 
 +++
 
