@@ -1,0 +1,8 @@
+public/
+content/post/*.html
+static/post/
+_cache/
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
