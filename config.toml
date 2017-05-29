@@ -45,7 +45,12 @@ googleAnalytics = "UA-67244126-3"
 [params.intro]
     header    = "Nima Hejazi's blog"
     paragraph = "musings on statistics, science, and computing"
-    about     = "Biostatistics PhD student: Causal Inference and Data Science"
+    about     = "Nima is a Biostatistics PhD student at UC Berkeley. His
+                 research interests center around causal inference, machine
+                 learning, nonparametric statistics, statistical computing, and
+                 data science, with applications in the biomedical and health
+                 sciences. Here, Nima writes about various topics related to the
+                 aforementioned interests."
 
     # This will also appear on the sidebar.
     # A width of less than 100px is recommended
@@ -54,8 +59,8 @@ googleAnalytics = "UA-67244126-3"
     src       = "/img/main/avatar.jpg"
     # modify your picture in the shape of a circle or
     # future imperfect's hexagonal shape
-    circle    = true
-    imperfect = false
+    circle    = false
+    imperfect = true
     width     = ""
     alt       = ""
 

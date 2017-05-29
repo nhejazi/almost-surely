@@ -34,7 +34,7 @@ To start, I merely read in the text file, organized the SNPs by chromosome, and
 (using `ggplot2`) produced a histogram of the distribution of SNPs across the
 chromosomes (plus those occurring in mitochondrial DNA):
 
-<img src="../../../../images/snp_distribution.jpg"
+<img src="../../img/main/snp_distribution.jpg"
 alt="Distribution of single nucleotide polymorphisms across the genome" width="700" height="700">
 
 The plot above is actually rather uninformative. As it turns out, the number of
@@ -60,7 +60,7 @@ my data set). This _data.frame_ was then filtered to mark alleles falling in the
 GWAS data available). The plot generated from examining these regions is
 displayed below:
 
-<img src="../../../../images/risk_karyotype.jpg"
+<img src="../../img/main/risk_karyotype.jpg"
 alt="a rough karyotype comparing my alleles to GWAS data"  width="700" height="700">
 
 Across all alleles available in public GWAS data, those alleles found in my data

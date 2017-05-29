@@ -51,7 +51,7 @@ I then proceeded to plot the cumulative distribution function (CDF) of my steps
 (as measured minute-by-minute) over the past day. The plot is what the CDF
 looked like:
 
-<img src="../../../../images/steps_Apr20.png"
+<img src="../../img/main/steps_Apr20.png"
 alt="Distribution of my cumulative steps on 2016 April 20" width="800" height="550">
 
 I found the CDF of my steps over a single day to be a convenient and informative
