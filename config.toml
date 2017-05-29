@@ -18,7 +18,7 @@ googleAnalytics = "UA-67244126-3"
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/post/"
+    viewMorePostLink     = "/post"
 
     # Optional Params
     categoriesByCount    = true
@@ -74,7 +74,7 @@ googleAnalytics = "UA-67244126-3"
 
 [[menu.main]]
     name = "Categories"
-    url = "/categories/"
+    url = "/categories"
     weight = 2
 
 [[menu.main]]
