@@ -45,12 +45,7 @@ googleAnalytics = "UA-67244126-3"
 [params.intro]
     header    = "Nima Hejazi's blog"
     paragraph = "musings on statistics, science, and computing"
-    about     = "Nima is a Biostatistics PhD student at UC Berkeley. His
-                 research interests center around causal inference, machine
-                 learning, nonparametric statistics, statistical computing, and
-                 data science, with applications in the biomedical and health
-                 sciences. Here, Nima writes about various topics related to the
-                 aforementioned interests."
+    about     = "Nima is a Biostatistics PhD student. His interests center around causal inference, nonparametric statistics, machine learning, and data science, with applications in the biomedical sciences."
 
     # This will also appear on the sidebar.
     # A width of less than 100px is recommended
