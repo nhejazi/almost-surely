@@ -26,7 +26,7 @@ googleAnalytics = "UA-67244126-3"
     # The set of favicons used are based on the write-up from this link:
     # https://github.com/audreyr/favicon-cheat-sheet
     # Please see the favicon partial template for more information
-    loadFavicon          = false
+    loadFavicon          = true
     faviconVersion       = ""
 
     # Load custom CSS or JavaScript files. This replaces the deprecated params
