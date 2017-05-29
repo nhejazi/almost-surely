@@ -1,4 +1,4 @@
-baseurl = "http://nhejazi.github.io/blog-testing/"
+baseurl = "http://nimahejazi.org/testblog2/"
 languageCode = "en-us"
 title = "Nima Hejazi's blog"
 theme = "hugo-future-imperfect"
