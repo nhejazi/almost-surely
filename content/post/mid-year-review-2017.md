@@ -1,16 +1,14 @@
----
++++
 date: "2017-06-01"
+author: "Nima Hejazi"
+title: "2017 - a mid-year review"
+summary: "Review of productivity and graduate school in the first half of 2017"
+categories: [ "statistics", "graduate school", "productivity" ]
 comments: false
-title: 2017 - a mid-year review
-summary:
 status: draft
 published: false
-tags:
-- statistics
-- graduate school
-- productivity
 
----
++++
 
 "Hindsight is 20-20," at least that's how the saying goes...
 

@@ -1,15 +1,13 @@
----
++++
 date: "2016-05-12"
+author: "Nima Hejazi"
+title: "how to love a tool - gitsome"
+summary: "Discussion of the Gitsome CLI, based on the Xonsh shell"
+categories: [ "CLI", "productivity", "computing" ]
 comments: true
-title: how to love a tool - gitsome
-summary: on the Gitsome CLI for the Xonsh shell
 status: final
-tags:
-- gitsome
-- productivity
-- computing
 
----
++++
 
 After adopting the minimalistic yet awesome [Neovim](https://neovim.io/) as my
 new all-purpose text editor, I happened upon a new (and truly awesome!) shell,

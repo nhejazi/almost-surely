@@ -1,12 +1,13 @@
----
++++
 date: "2016-05-02"
+author: "Nima Hejazi"
+title: "R graphics - ggplot versus base"
+summary: ""
+categories: [ "ggplot2", "base graphics", "not so standard deviations" ]
 comments: true
-title: R graphics - ggplot versus base
-summary:
 status: final
-tags: ["ggplot2", "base graphics", "not so standard deviations"]
 
----
++++
 
 In the past several weeks, something of a debate has emerged regarding whether,
 in fact, there is a superior plotting system in R. First, a bit of history. The

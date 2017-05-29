@@ -4,10 +4,12 @@ title = "Nima Hejazi's blog"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
+enableEmoji = true
 disqusShortname = "nhejazi"
 googleAnalytics = "UA-67244126-3"
 
 [params]
+    author               = "Nima Hejazi"
     # Sets the meta tag description, usually reserved for the main page
     description          = "musings on statistics, science, and computing"
     # This will appear on the top left of the navigation bar
@@ -16,7 +18,7 @@ googleAnalytics = "UA-67244126-3"
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/blog/"
+    viewMorePostLink     = "/post/"
 
     # Optional Params
     categoriesByCount    = true
@@ -42,9 +44,7 @@ googleAnalytics = "UA-67244126-3"
     # This is optional, but it's suggested to use
 [params.intro]
     header    = "Nima Hejazi's blog"
-
     paragraph = "musings on statistics, science, and computing"
-
     about     = "Biostatistics PhD student: Causal Inference and Data Science"
 
     # This will also appear on the sidebar.
@@ -54,10 +54,10 @@ googleAnalytics = "UA-67244126-3"
     src       = "/img/main/avatar.jpg"
     # modify your picture in the shape of a circle or
     # future imperfect's hexagonal shape
-    circle    = false
-    imperfect = true
+    circle    = true
+    imperfect = false
     width     = ""
-    alt       = "Hugo Future Imperfect"
+    alt       = ""
 
     # Adjust the amount of recent posts on the sidebar.
     # This is optional. The default value 5 will be used
@@ -67,25 +67,30 @@ googleAnalytics = "UA-67244126-3"
 # Set up your menu items in the navigation bar
 # You can use identifier to prepend a font awesome icon to your text
 [[menu.main]]
-    name = "Blog"
-    url = "/blog"
+    name = "Posts"
+    url = "/post"
     identifier = "fa fa-newspaper-o"
     weight = 1
 
 [[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
+
+[[menu.main]]
     name = "About"
     url = "/about"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     name = "CV"
     url = "https://www.stat.berkeley.edu/~nhejazi/hejazi-cv.pdf"
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     name = "Main"
     url = "http://nimahejazi.org"
-    weight = 4
+    weight = 5
 
 # Insert your username and the icon will apear on the page as long as
 # socialAppearAtTop or socialAppearAtBottom is set to true in the params area

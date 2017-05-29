@@ -1,16 +1,14 @@
----
-date: "2017-05-29"
++++
+date: "2017-06-29"
+author: "Nima Hejazi"
+title: "reflections on reproducibility"
+summary: ""
+tags: [ "reproducibility", "open science", "peer review" ]
 comments: false
-title: reflections on reproducibility
-summary:
 status: draft
 published: false
-tags:
-- reproducibility
-- open science
-- peer review
 
----
++++
 
 In recent years, much attention has been focused on issues of reproducibility in
 modern science. Despite reports of fraud in science -- especially in the

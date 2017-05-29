@@ -1,12 +1,13 @@
----
++++
 date: "2016-06-25"
+author: "Nima Hejazi"
+title: "a shell called xonsh"
+summary: "Discussion of the new Python-based Xonsh shell"
+categories: [ "shells", "productivity", "computing" ]
 comments: true
-title: a shell called xonsh
-summary: on the Xonsh shell
 status: final
-tags: [xonsh, productivity, computing]
 
----
++++
 
 Any computational scientist who spends their time writing and using tools or
 analyzing data has certainly had to spend a great deal of his/her time

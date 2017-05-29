@@ -1,9 +1,12 @@
----
++++
 date: "2016-02-22"
+author: "Nima Hejazi"
+title: "it's all in a name"
+summary: ""
 comments: false
-title: it's all in a name
+status: final
 
----
++++
 
 The name of this blog is taken from various ideas in stochastic convergence
 theory -- in particular, "almost surely" is intended as a reference to the

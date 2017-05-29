@@ -1,14 +1,13 @@
----
++++
 date: "2016-03-22"
+author: "Nima Hejazi"
+title: "snooping through my SNPs, part 1"
+summary: "Exploratory analysis of my SNP profile"
+categories: [ "personal genomics", "bioconductor", "23andMe" ]
 comments: true
-title: snooping through my SNPs, part 1
 status: final
-tags:
-- personal genomics
-- bioconductor
-- 23andMe
 
----
++++
 
 In recent years, the growing trend of personal genomics has spawned its own
 industry, with several companies now offering to sequence the genomes of

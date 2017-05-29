@@ -1,15 +1,13 @@
----
++++
 date: "2016-05-25"
+author: "Nima Hejazi"
+title: "how to love a tool - atom"
+summary: "Discussion of the new Atom text editor"
+categories: [ "editors", "productivity", "computing" ]
 comments: true
-title: how to love a tool - atom
-summary: on the Atom text editor
 status: final
-tags:
-- atom
-- productivity
-- computing
 
----
++++
 
 As part of the series of posts on computational tools that I have grown to love 
 ("How to Love a Tool..."), here, I am going to talk about the [Atom text

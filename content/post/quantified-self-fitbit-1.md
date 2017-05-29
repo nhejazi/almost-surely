@@ -1,14 +1,13 @@
----
++++
 date: "2016-04-21"
+author: "Nima Hejazi"
+title: "quantified self with Fitbit, part 1"
+summary: "Early exploration of analyzing Fitbit data"
+categories: [ "fitbit", "biometrics", "quantified self" ]
 comments: true
-title: quantified self with Fitbit, part 1
 status: final
-tags:
-- fitbit
-- biometrics
-- quantified self
 
----
++++
 
 An interesting phenomenon that has appeared in recent years is the notion of
 "Quantified Self" - simply the idea that quantifying much of our daily activity

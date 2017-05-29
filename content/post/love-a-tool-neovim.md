@@ -1,15 +1,13 @@
----
++++
 date: "2016-05-06"
+author: "Nima Hejazi"
+title: "how to love a tool - neovim"
+summary: "Discussion of the Neovim text editor"
+categories: [ "editors", "productivity", "computing" ]
 comments: true
-title: how to love a tool - neovim
-summary: on the Neovim text editor
 status: final
-tags:
-- neovim
-- productivity
-- computing
 
----
++++
 
 Recently, I decided to look for new tools to improve my work efficiency, and
 very early in the endeavor to find new and better tools, I came across the
