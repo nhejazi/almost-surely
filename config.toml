@@ -18,7 +18,7 @@ googleAnalytics = "UA-67244126-3"
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/post"
+    viewMorePostLink     = "/blog/post" # NOTE: does not respect baseURL
 
     # Optional Params
     categoriesByCount    = true
