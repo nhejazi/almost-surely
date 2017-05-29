@@ -5,7 +5,6 @@ title = "how to love a tool - atom"
 summary = "Discussion of the new Atom text editor"
 categories = [ "editors", "productivity", "computing" ]
 comments = true
-status = final
 
 +++
 

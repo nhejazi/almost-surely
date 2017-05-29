@@ -5,7 +5,6 @@ title = "purpose"
 summary = ""
 categories = [ ]
 comments = false
-status = "final"
 
 +++
 

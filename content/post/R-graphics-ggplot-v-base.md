@@ -5,7 +5,6 @@ title = "R graphics - ggplot versus base"
 summary = ""
 categories = [ "ggplot2", "base graphics", "not so standard deviations" ]
 comments = true
-status = final
 
 +++
 

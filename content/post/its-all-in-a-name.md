@@ -4,7 +4,6 @@ author = "Nima Hejazi"
 title = "it's all in a name"
 summary = ""
 comments = false
-status = final
 
 +++
 

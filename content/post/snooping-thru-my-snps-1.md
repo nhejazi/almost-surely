@@ -5,7 +5,6 @@ title = "snooping through my SNPs, part 1"
 summary = "Exploratory analysis of my SNP profile"
 categories = [ "personal genomics", "bioconductor", "23andMe" ]
 comments = true
-status = "final"
 
 +++
 

@@ -5,7 +5,6 @@ title = "how to love a tool - neovim"
 summary = "Discussion of the Neovim text editor"
 categories = [ "editors", "productivity", "computing" ]
 comments = true
-status = final
 
 +++
 

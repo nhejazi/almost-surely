@@ -5,7 +5,6 @@ title = "reflections on reproducibility"
 summary = ""
 categories = [ "reproducibility", "open science", "peer review" ]
 comments = false
-status = "draft"
 published = false
 
 +++

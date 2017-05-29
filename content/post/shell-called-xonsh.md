@@ -5,7 +5,6 @@ title = "a shell called xonsh"
 summary = "Discussion of the new Python-based Xonsh shell"
 categories = [ "shells", "productivity", "computing" ]
 comments = true
-status = "final"
 
 +++
 

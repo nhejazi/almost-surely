@@ -5,7 +5,6 @@ title = "quantified self with Fitbit, part 1"
 summary = "Early exploration of analyzing Fitbit data"
 categories = [ "fitbit", "biometrics", "quantified self" ]
 comments = true
-status = "final"
 
 +++
 
