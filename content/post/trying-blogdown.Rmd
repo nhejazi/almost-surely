@@ -7,6 +7,12 @@ categories: [ "R", "blog", "tools", "productivity", "computing" ]
 
 ---
 
+```{r setup, include=FALSE}
+library(ggplot2)
+library(skimr)
+library(nima)
+```
+
 Recently, I came across the [blogdown R
 package](https://bookdown.org/yihui/blogdown/), a variant of RStudio's popular
 [bookdown R package](https://bookdown.org/yihui/bookdown/), made by Yihui Xie
@@ -20,12 +26,10 @@ First, let's generate some data and try doing some very simple summary
 statistics:
 
 
-```{r data}
-# we're going to be simulating...
+```{r data_simulation}
+# we're going to be simulating...set seed and constants
 set.seed(6142)
-
-# set constants
-n <- 100
+n <- 1000
 tx_mean <- 25
 
 # generate variables randomly and by structural equation
@@ -33,15 +37,15 @@ W <- replicate(3, rnorm(n))
 A <- rnorm(n, mean = tx_mean, sd = 2*sqrt(tx_mean))
 Y <- as.numeric(A > tx_mean & W[, 1] > 0)
 O <- as.data.frame(cbind(Y, A, W))
-
-# quick summary of concatenated data structure
-skimr::skim(O)
+head(O)
+skim(O)
+summary(O)
 ```
 
 Look at that! In the above, we generate background covariates ($W$) based on the
 standard Normal distribution, a treatment ($A$) based on a Normal distribution
 with specified mean ($\mu = 25$) and standard deviation
-($\sigma = 2 \cdot \sqrt{\mu} = 5$), and an outcome ($Y$) based on a specified
+($\sigma = 2 \cdot \sqrt{\mu} = 10$), and an outcome ($Y$) based on a specified
 structural equation of the form:
 
 $$Y = I(A > 25) \cdot I(W_1 > 0),$$ for $n = 100$.
@@ -56,28 +60,27 @@ msm <- glm(Y ~ ., family = "binomial", data = O)
 summary(msm)
 ```
 
-We then project the observed data ($O$) onto a working MSM for the outcome,
-using a logistic regression with terms for all of the baseline covariates and
-the treatment. The `summary` of the resultant `glm` object is displayed above.
-Notice that the estimated coefficients for the terms corresponding to the
-treatment ($A$) and first baseline covariate ($W_1$) are statistically
-significant -- recall that these were the variables we used in specifying the
-structural equation for $Y$ above.
+Above, we projected the observed data ($O = (W, A, Y)$) onto a working MSM for
+the outcome, using a logistic regression with terms for all of the baseline
+covariates and the treatment. The `summary` of the resultant `glm` object is
+displayed above. Notice that the estimated coefficients for the terms
+corresponding to the treatment ($A$) and first baseline covariate ($W_1$) are
+statistically significant -- recall that these were the variables we used in
+specifying the structural equation for $Y$ above.
 
 I think I'll wrap up this experiment by trying some simple plotting:
 
 ```{r plots, fig.align='center', fig.cap="Logistic regression of A on Y"}
-library(ggplot2)
 p <- ggplot(O, aes(A, Y)) + geom_point()
 p <- p + stat_smooth(method = "glm", method.args = list(family = "binomial"),
                      formula = y ~ x)
-p <- p + nima::theme_nima() + xlab("A (treatment)") + ylab("Y (outcome)")
+p <- p + xlab("A (treatment)") + ylab("Y (outcome)") + theme_nima()
 print(p)
 ```
 
 We can plot the relationship between the treatment and outcome using a logistic
 regression fit. Pretty awesome that `blogdown` supports such nice graphics so
 easily. In my old blog, I had to come up with a custom R script to use `knitr`
-and `RMarkdown` to process Rmd files to standard markdown, allowing them to be
-rendered on my old [Jekyll](https://jekyllrb.com/) blog. Glad I never have to do
-that again `r emo::ji("awesome")`
+to process [R Markdown](http://rmarkdown.rstudio.com/) to standard markdown,
+allowing them to be rendered on my old [Jekyll](https://jekyllrb.com/) blog.
+Glad I never have to do that again `r emo::ji("awesome")`
