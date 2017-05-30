@@ -37,9 +37,9 @@ W <- replicate(3, rnorm(n))
 A <- rnorm(n, mean = tx_mean, sd = 2*sqrt(tx_mean))
 Y <- as.numeric(A > tx_mean & W[, 1] > 0)
 O <- as.data.frame(cbind(Y, A, W))
+colnames(O) <- c("Y", "A", c("W", seq_len(3)))
 head(O)
 skim(O)
-summary(O)
 ```
 
 Look at that! In the above, we generate background covariates ($W$) based on the
@@ -62,11 +62,11 @@ summary(msm)
 
 Above, we projected the observed data ($O = (W, A, Y)$) onto a working MSM for
 the outcome, using a logistic regression with terms for all of the baseline
-covariates and the treatment. The `summary` of the resultant `glm` object is
-displayed above. Notice that the estimated coefficients for the terms
-corresponding to the treatment ($A$) and first baseline covariate ($W_1$) are
-statistically significant -- recall that these were the variables we used in
-specifying the structural equation for $Y$ above.
+covariates and the treatment. From the `summary` of the resultant `glm` object,
+we notice that the estimated coefficients for the terms corresponding to the
+treatment ($A$) and first baseline covariate ($W_1$) are statistically
+significant -- recall that these were the variables we used in specifying the
+structural equation for $Y$ above.
 
 I think I'll wrap up this experiment by trying some simple plotting:
 
