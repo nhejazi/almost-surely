@@ -1,7 +1,7 @@
 ---
 date: "2017-05-29"
 author: "Nima Hejazi"
-title: "The only reason one should ever use a pie chart"
+title: "taking blogdown for a test drive"
 type: "post"
 categories: [ "R", "blogdown", "blog" ]
 
@@ -33,11 +33,13 @@ summary(msm)
 
 Look at that! In the above, we generate background covariates (W) based on the
 standard Normal distribution, a treatment (A) based on a Normal distribution,
-and an outcome (Y) based on a specified structural equation of the form
-($ Y = I(A > 25) \cdot I(W_1 > 0)$), for $n = 100$. We then project the observed
-data ($O$) onto a marginal structural model (MSM) using a logistic regression
-with terms for all of the covariates and the treatment. The `summary` of the
-resultant `glm` object is displayed above.
+and an outcome (Y) based on a specified structural equation of the form:
+
+$$Y = I(A > 25) \cdot I(W_1 > 0),$$
+
+for n = 100. We then project the observed data (O) onto a marginal structural
+model (MSM) using a logistic regression with terms for all of the covariates and
+the treatment. The `summary` of the resultant `glm` object is displayed above.
 
 I think I'll wrap up this experiment by trying some simple plotting:
 
