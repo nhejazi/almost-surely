@@ -40,7 +40,7 @@ $$Y = I(A > 25) \cdot I(W_1 > 0),$$ for n = 100.
 Having just recently returned from [ACIC '17](http://causal.unc.edu/acic2017/),
 I have causal inference on my mind. You'll notice that in specifying the data
 generating processes above, I provided a structural equation for Y -- now, let's
-play with MSMs just a little bit:
+play with marginal structural models (MSMs) just a little bit:
 
 ```{r msm}
 msm <- glm(Y ~ ., family = "binomial", data = O)
@@ -51,12 +51,13 @@ We then project the observed data (O) onto a marginal structural model (MSM) for
 the outcome, using a logistic regression with terms for all of the baseline
 covariates and the treatment. The `summary` of the resultant `glm` object is
 displayed above. Notice that the estimated coefficients for the terms
-corresponding to the treatment (A) and first baseline covariate are significant
-(recall that these were the variables we used in specifying the SEM for Y).
+corresponding to the treatment (A) and first baseline covariate (W_1) are
+statistically significant -- recall that these were the variables we used in
+specifying the structural equation for Y above.
 
 I think I'll wrap up this experiment by trying some simple plotting:
 
-```{r plots}
+```{r plots, fig.align='center', fig.cap="Logistic regression of A on Y"}
 library(ggplot2)
 p <- ggplot(O, aes(A, Y)) + geom_point()
 p <- p + stat_smooth(method = "glm", method.args = list(family = "binomial"),
