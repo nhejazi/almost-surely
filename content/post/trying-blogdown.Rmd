@@ -16,9 +16,9 @@ computationally reproducible writing and programming. It also plays well with
 the new static site engine [Hugo](https://gohugo.io/). Here, I'm mostly just
 going to take `blogdown` for a spin.
 
-First, let's generate some data and try doing some very simple statistics
-(having just recently returned from [ACIC '17](http://causal.unc.edu/acic2017/),
-I have causal inference on my mind, so MSMs will have to qualify as "simple"):
+First, let's generate some data and try doing some very simple summary
+statistics:
+
 
 ```{r data}
 n <- 100
@@ -27,19 +27,32 @@ W <- replicate(3, rnorm(n))
 A <- rnorm(n, mean = tx_mean, sd = 2*sqrt(tx_mean))
 Y <- as.numeric(A > tx_mean & W[, 1] > 0)
 O <- as.data.frame(cbind(Y, A, W))
+skimr::skim(O)
+```
+
+Look at that! In the above, we generate background covariates (W) based on the
+standard Normal distribution, a treatment (A) based on a Normal distribution
+with specified mean and standard deviation, and an outcome (Y) based on a
+specified structural equation of the form:
+
+$$Y = I(A > 25) \cdot I(W_1 > 0),$$ for n = 100.
+
+Having just recently returned from [ACIC '17](http://causal.unc.edu/acic2017/),
+I have causal inference on my mind. You'll notice that in specifying the data
+generating processes above, I provided a structural equation for Y -- now, let's
+play with MSMs just a little bit:
+
+```{r msm}
 msm <- glm(Y ~ ., family = "binomial", data = O)
 summary(msm)
 ```
 
-Look at that! In the above, we generate background covariates (W) based on the
-standard Normal distribution, a treatment (A) based on a Normal distribution,
-and an outcome (Y) based on a specified structural equation of the form:
-
-$$Y = I(A > 25) \cdot I(W_1 > 0),$$
-
-for n = 100. We then project the observed data (O) onto a marginal structural
-model (MSM) using a logistic regression with terms for all of the covariates and
-the treatment. The `summary` of the resultant `glm` object is displayed above.
+We then project the observed data (O) onto a marginal structural model (MSM) for
+the outcome, using a logistic regression with terms for all of the baseline
+covariates and the treatment. The `summary` of the resultant `glm` object is
+displayed above. Notice that the estimated coefficients for the terms
+corresponding to the treatment (A) and first baseline covariate are significant
+(recall that these were the variables we used in specifying the SEM for Y).
 
 I think I'll wrap up this experiment by trying some simple plotting:
 
