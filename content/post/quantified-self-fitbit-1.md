@@ -3,7 +3,7 @@ date = "2016-04-21"
 author = "Nima Hejazi"
 title = "quantified self with Fitbit, part 1"
 summary = "Early exploration of analyzing Fitbit data"
-categories = [ "fitbit", "biometrics", "quantified self" ]
+categories = [ "fitbit", "biometrics", "quantified self", "data science" ]
 comments = true
 
 +++

@@ -3,7 +3,7 @@ date: "2017-05-29"
 author: "Nima Hejazi"
 title: "taking blogdown for a test drive"
 type: "post"
-categories: [ "R", "blogdown", "blog" ]
+categories: [ "R", "blog", "tools", "productivity", "computing" ]
 
 ---
 
@@ -21,39 +21,48 @@ statistics:
 
 
 ```{r data}
+# we're going to be simulating...
+set.seed(6142)
+
+# set constants
 n <- 100
 tx_mean <- 25
+
+# generate variables randomly and by structural equation
 W <- replicate(3, rnorm(n))
 A <- rnorm(n, mean = tx_mean, sd = 2*sqrt(tx_mean))
 Y <- as.numeric(A > tx_mean & W[, 1] > 0)
 O <- as.data.frame(cbind(Y, A, W))
+
+# quick summary of concatenated data structure
 skimr::skim(O)
 ```
 
-Look at that! In the above, we generate background covariates (W) based on the
-standard Normal distribution, a treatment (A) based on a Normal distribution
-with specified mean and standard deviation, and an outcome (Y) based on a
-specified structural equation of the form:
+Look at that! In the above, we generate background covariates ($W$) based on the
+standard Normal distribution, a treatment ($A$) based on a Normal distribution
+with specified mean ($\mu = 25$) and standard deviation
+($\sigma = 2 \cdot \sqrt{\mu} = 5$), and an outcome ($Y$) based on a specified
+structural equation of the form:
 
-$$Y = I(A > 25) \cdot I(W_1 > 0),$$ for n = 100.
+$$Y = I(A > 25) \cdot I(W_1 > 0),$$ for $n = 100$.
 
 Having just recently returned from [ACIC '17](http://causal.unc.edu/acic2017/),
 I have causal inference on my mind. You'll notice that in specifying the data
-generating processes above, I provided a structural equation for Y -- now, let's
-play with marginal structural models (MSMs) just a little bit:
+generating processes above, I provided a structural equation for $Y$ -- now,
+let's play with marginal structural models (MSMs) just a little bit:
 
 ```{r msm}
 msm <- glm(Y ~ ., family = "binomial", data = O)
 summary(msm)
 ```
 
-We then project the observed data (O) onto a marginal structural model (MSM) for
-the outcome, using a logistic regression with terms for all of the baseline
-covariates and the treatment. The `summary` of the resultant `glm` object is
-displayed above. Notice that the estimated coefficients for the terms
-corresponding to the treatment (A) and first baseline covariate (W_1) are
-statistically significant -- recall that these were the variables we used in
-specifying the structural equation for Y above.
+We then project the observed data ($O$) onto a working MSM for the outcome,
+using a logistic regression with terms for all of the baseline covariates and
+the treatment. The `summary` of the resultant `glm` object is displayed above.
+Notice that the estimated coefficients for the terms corresponding to the
+treatment ($A$) and first baseline covariate ($W_1$) are statistically
+significant -- recall that these were the variables we used in specifying the
+structural equation for $Y$ above.
 
 I think I'll wrap up this experiment by trying some simple plotting:
 
@@ -70,5 +79,5 @@ We can plot the relationship between the treatment and outcome using a logistic
 regression fit. Pretty awesome that `blogdown` supports such nice graphics so
 easily. In my old blog, I had to come up with a custom R script to use `knitr`
 and `RMarkdown` to process Rmd files to standard markdown, allowing them to be
-rendered on my old [Jekyll](https://jekyllrb.com/) blog. Great to not have to do
-that ever again...
+rendered on my old [Jekyll](https://jekyllrb.com/) blog. Glad I never have to do
+that again `r emo::ji("awesome")`
