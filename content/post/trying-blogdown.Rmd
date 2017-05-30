@@ -71,7 +71,7 @@ library(ggplot2)
 p <- ggplot(O, aes(A, Y)) + geom_point()
 p <- p + stat_smooth(method = "glm", method.args = list(family = "binomial"),
                      formula = y ~ x)
-p <- p + theme_minimal() + xlab("A (treatment)") + ylab("Y (outcome)")
+p <- p + nima::theme_nima() + xlab("A (treatment)") + ylab("Y (outcome)")
 print(p)
 ```
 
