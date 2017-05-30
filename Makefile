@@ -1,5 +1,5 @@
 .PHONY : all
-all: deploy
+all: build deploy
 
 build:
 	Rscript -e "blogdown::build_site()"
