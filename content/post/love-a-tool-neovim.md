@@ -3,7 +3,7 @@ date = "2016-05-06"
 author = "Nima Hejazi"
 title = "how to love a tool - neovim"
 summary = "Discussion of the Neovim text editor"
-categories = [ "tools", "productivity", "computing", "editors" ]
+categories = [ "tools", "productivity", "computing", "text editors" ]
 comments = true
 
 +++

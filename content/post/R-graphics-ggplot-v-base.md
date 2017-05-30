@@ -3,8 +3,7 @@ date = "2016-05-02"
 author = "Nima Hejazi"
 title = "R graphics - ggplot versus base"
 summary = ""
-categories = [ "R", "ggplot2", "graphics", "not so standard deviations",
-               "data science" ]
+categories = [ "R", "graphics", "not so standard deviations", "data science" ]
 comments = true
 
 +++

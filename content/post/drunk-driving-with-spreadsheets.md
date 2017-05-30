@@ -3,7 +3,7 @@ date = "2016-02-24"
 author = "Nima Hejazi"
 title = "drunk driving with spreadsheets"
 summary = ""
-categories = [ "not so standard deviations", "data science", "spreadsheets" ]
+categories = [ "not so standard deviations", "data science" ]
 comments = true
 
 +++

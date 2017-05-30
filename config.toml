@@ -83,13 +83,13 @@ MathJaxVersion = "2.7.1"
 [[menu.main]]
     name = "About"
     url = "/about"
-    identifier = "fa fa-info-circle"
+    identifier = "fa fa-info"
     weight = 3
 
 [[menu.main]]
     name = "CV"
     url = "https://www.stat.berkeley.edu/~nhejazi/hejazi-cv.pdf"
-    identifier = "fa fa-user-circle"
+    identifier = "fa fa-user"
     weight = 4
 
 [[menu.main]]
