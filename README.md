@@ -1,6 +1,6 @@
 # Nima Hejazi's blog
 
-> "Almost Surely: stochastic musings on statistics, science, and computing," the
+> "Almost Surely: stochastic musings on statistics, sense, and science" the
 > personal blog of [Nima Hejazi](http://nimahejazi.org)
 
 ---

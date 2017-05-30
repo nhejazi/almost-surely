@@ -1,6 +1,6 @@
 +++
 date = "2016-02-01"
-title = "Almost Surely: musings on statistics, science, and computing"
+title = "Almost Surely: stochastic musings on statistics, sense, and science"
 +++
 
 "Reading maketh a full man; conference a ready man; and writing an exact man."
@@ -13,20 +13,15 @@ mean to slow down, organize, and explore my thinking on those topics that most
 readily capture my attention. The goal ultimately is to combat -- or, failing
 that, at least escape -- the fast-paced and unstructured style of thinking
 unfortunately encouraged by our modern ease of access to both information and
-opinions. In escaping this deluge of external opinions, it is my hope that the
-thoughts produced here will be informed singularly by those experiences and
-schools of thought that have shaped my way of thinking. Here, I plan to discuss
-exciting ideas and breakthroughs in applied statistics, data science, scientific
-computing, and the biomedical sciences.
+opinions.
 
-The name of this blog is taken from various ideas in stochastic convergence
-theory -- in particular, "almost surely" is intended as a reference to the
-notion of [almost sure
-convergence.](https://en.wikipedia.org/wiki/Convergence_of_random_variables#Almost_sure_convergence)
-
-Though this choice of title emerged rather whimsically, it now seems quite
-fitting given the nature of the topics to which I have chosen to dedicate this
-blog -- what will hopefully be a mixture of interesting, modern ideas from
-theoretical statistics, applied statistics (in particular, biostatistics), data
-science, causal inference, information theory, scientific computing, and, to a
-more limited extent, the biomedical sciences.
+Though it emerged rather whimsically, the name of this blog merits some
+explanation -- specifically, the term "almost surely", from the notion of
+[almost sure convergence](https://en.wikipedia.org/wiki/Convergence_of_random_variables#Almost_sure_convergence),
+first captured by attention when studying stochastic convergence theory. It now
+seems a rather fitting title, given that I have chosen to dedicate my writing
+here to modern ideas from theoretical statistics (in particular, nonparametrics
+and high-dimensional probability), applied statistics and biostatistics, data
+science, causal inference, information theory, and scientific computing -- all
+with an eye towards the role that statistics ought to play in shaping science
+and policy in the 21st century.

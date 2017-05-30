@@ -11,7 +11,7 @@ googleAnalytics = "UA-67244126-3"
 [params]
     author               = "Nima Hejazi"
     # Sets the meta tag description, usually reserved for the main page
-    description          = "musings on statistics, science, and computing"
+    description          = "stochastic musings on statistics, sense, and science"
     # This will appear on the top left of the navigation bar
     navbarTitle          = "Nima Hejazi's blog"
     # Social media buttons that appear on the sidebar
