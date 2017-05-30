@@ -1,0 +1,58 @@
+---
+date: "2017-05-29"
+author: "Nima Hejazi"
+title: "The only reason one should ever use a pie chart"
+type: "post"
+categories: [ "R", "blogdown", "blog" ]
+
+---
+
+Recently, I came across the [blogdown R
+package](https://bookdown.org/yihui/blogdown/), a variant of RStudio's popular
+[bookdown R package](https://bookdown.org/yihui/bookdown/), made by Yihui Xie
+and Amber Thomas. Blogdown allows the user to write blog posts with code chunks,
+in any of the large variety of languages supported by RMarkdown, allowing for
+computationally reproducible writing and programming. It also plays well with
+the new static site engine [Hugo](https://gohugo.io/). Here, I'm mostly just
+going to take `blogdown` for a spin.
+
+First, let's generate some data and try doing some very simple statistics
+(having just recently returned from [ACIC '17](http://causal.unc.edu/acic2017/),
+I have causal inference on my mind, so MSMs will have to qualify as "simple"):
+
+```{r data}
+n <- 100
+tx_mean <- 25
+W <- replicate(3, rnorm(n))
+A <- rnorm(n, mean = tx_mean, sd = 2*sqrt(tx_mean))
+Y <- as.numeric(A > tx_mean & W[, 1] > 0)
+O <- as.data.frame(cbind(Y, A, W))
+msm <- glm(Y ~ ., family = "binomial", data = O)
+summary(msm)
+```
+
+Look at that! In the above, we generate background covariates (W) based on the
+standard Normal distribution, a treatment (A) based on a Normal distribution,
+and an outcome (Y) based on a specified structural equation of the form
+($ Y = I(A > 25) \cdot I(W_1 > 0)$), for $n = 100$. We then project the observed
+data ($O$) onto a marginal structural model (MSM) using a logistic regression
+with terms for all of the covariates and the treatment. The `summary` of the
+resultant `glm` object is displayed above.
+
+I think I'll wrap up this experiment by trying some simple plotting:
+
+```{r plots}
+library(ggplot2)
+p <- ggplot(O, aes(A, Y)) + geom_point()
+p <- p + stat_smooth(method = "glm", method.args = list(family = "binomial"),
+                     formula = y ~ x)
+p <- p + theme_minimal() + xlab("A (treatment)") + ylab("Y (outcome)")
+print(p)
+```
+
+We can plot the relationship between the treatment and outcome using a logistic
+regression fit. Pretty awesome that `blogdown` supports such nice graphics so
+easily. In my old blog, I had to come up with a custom R script to use `knitr`
+and `RMarkdown` to process Rmd files to standard markdown, allowing them to be
+rendered on my old [Jekyll](https://jekyllrb.com/) blog. Great to not have to do
+that ever again...
