@@ -1,0 +1,82 @@
+---
+date: "2017-06-14"
+author: "Nima Hejazi"
+title: "renjin: speeding up R with Java"
+type: "post"
+draft: true
+categories: [ "R", "blog", "tools", "productivity", "computing" ]
+
+---
+
+```{r setup, include=FALSE}
+library(nima)
+```
+
+R is a great, highly flexible language for statistical computing, but it does
+suffer greatly from performance issues. As I've steadily increase my use of R, I
+quickly became aware that I would have to one day learn to integrate R with a
+programming language with better performance, the main choice here being C++. To
+integrate R with C++, the `Rcpp` framework (and R package) was created, allowing
+for parts of the R code of a given package or project to be re-written in C++
+and easily integrated with R. Using `Rcpp` comes with great advantages in terms
+of R code performance; however, it obviously requires that one learn C++. I was
+about to devote a great deal of time to doing so, when -- fortuitously -- I came
+across the rather new [`renjin` project](http://www.renjin.org/). Renjin is a
+new (in-development) interpreter for GNU R that relies on the Java Virtual
+Machine (JVM) to enhance R's performance. The idea seems to be that it can
+eventually serve as a drop-in replacement for GNU R. It also seems that the
+`renjin` R package can be used with the standard GNU R interpreter to wrap
+existing R code and provide huge performance increases by using the JVM.
+
+## Minimal example
+
+I just thought I would try the example from the `renjin` R package documentation
+out, before moving on to more involved examples. Here we go:
+
+```{r}
+library(renjin)
+```
+
+```{r}
+bigsum <- function(n) {
+  sum <- 0
+  for(i in seq(from = 1, to = n)) {
+    sum <- sum + i
+  }
+  sum
+}
+
+bigsumc <- compiler::cmpfun(bigsum) # GNU R's byte code compiler
+
+system.time(bigsum(1e5))
+system.time(bigsumc(1e5))
+```
+
+From the above, we notice that directly using the bytecode compiler improves
+performance of our `bigsum` function. Maybe `renjin` can help out even more?
+
+```{r}
+tryCatch(system.time(renjin(bigsum(1e5))), function(e) NA)
+```
+
+Well, it looks like `renjin` isn't quite ready for prime time. It seems to [fail
+when acting on bytecode compiled functions (the standard in GNU R
+3.4+)](https://twitter.com/dselivanov_/status/874981607635124225).
+
+## The Highly Adaptive LASSO (HAL)
+
+Recent developments in statistical machine learning and causal inference led to
+a very interesting new estimation algorithm (called the highly adaptive LASSO)
+being proposed by D.C. Benkeser and M.J. van der Laan. Due to the intensive
+nature of this estimation algorithm, it can take quite a long time to run,
+becoming infeasible rather quickly, as the dimensionality of a data set of
+interest grows. Initial plans included integrating `hal` with `rcpp` in order to
+boost performance, which would require that parts of the `hal` codebase be
+re-written in C++ via the Rcpp framework. I thought `renjin` might be able to
+help out with this. Here goes:
+
+```{r}
+library(hal)
+```
+
+To be continued...
