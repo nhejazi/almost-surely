@@ -33,6 +33,7 @@ I just thought I would try the example from the `renjin` R package documentation
 out, before moving on to more involved examples. Here we go:
 
 ```{r}
+install.packages("https://nexus.bedatadriven.com/content/groups/public/org/renjin/renjin-gnur-package/0.8.2424/renjin-gnur-package-0.8.2424.tar.gz")
 library(renjin)
 ```
 
@@ -55,7 +56,7 @@ From the above, we notice that directly using the bytecode compiler improves
 performance of our `bigsum` function. Maybe `renjin` can help out even more?
 
 ```{r}
-#tryCatch(system.time(renjin(bigsum(1e5))), function(e) print("error"))
+tryCatch(system.time(renjin(bigsum(1e5))), function(e) print("error"))
 ```
 
 Well, it looks like `renjin` isn't quite ready for prime time. It seems to [fail
