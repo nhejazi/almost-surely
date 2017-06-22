@@ -13,7 +13,7 @@ MathJaxVersion = "2.7.1"
 [params]
     author               = "Nima Hejazi"
     # Sets the meta tag description, usually reserved for the main page
-    description          = "stochastic musings on statistics, sense, and science"
+    description          = "stochastic musings on statistics, and some sense about science"
     # This will appear on the top left of the navigation bar
     navbarTitle          = "Nima Hejazi's blog"
     # Social media buttons that appear on the sidebar

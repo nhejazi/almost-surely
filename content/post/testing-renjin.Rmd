@@ -55,28 +55,12 @@ system.time(bigsumc(1e5))
 From the above, we notice that directly using the bytecode compiler improves
 performance of our `bigsum` function. Maybe `renjin` can help out even more?
 
-```{r}
+```{r, eval=FALSE}
 tryCatch(system.time(renjin(bigsum(1e5))), function(e) print("error"))
+
+renjin(bigsum(1e5))
 ```
 
 Well, it looks like `renjin` isn't quite ready for prime time. It seems to [fail
 when acting on bytecode compiled functions (the standard in GNU R
 3.4+)](https://twitter.com/dselivanov_/status/874981607635124225).
-
-## The Highly Adaptive LASSO (HAL)
-
-Recent developments in statistical machine learning and causal inference led to
-a very interesting new estimation algorithm (called the highly adaptive LASSO)
-being proposed by D.C. Benkeser and M.J. van der Laan. Due to the intensive
-nature of this estimation algorithm, it can take quite a long time to run,
-becoming infeasible rather quickly, as the dimensionality of a data set of
-interest grows. Initial plans included integrating `hal` with `rcpp` in order to
-boost performance, which would require that parts of the `hal` codebase be
-re-written in C++ via the Rcpp framework. I thought `renjin` might be able to
-help out with this. Here goes:
-
-```{r}
-library(hal)
-```
-
-To be continued...
