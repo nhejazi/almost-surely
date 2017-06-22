@@ -32,7 +32,7 @@ existing R code and provide huge performance increases by using the JVM.
 I just thought I would try the example from the `renjin` R package documentation
 out, before moving on to more involved examples. Here we go:
 
-```{r}
+```{r, eval=FALSE}
 install.packages("https://nexus.bedatadriven.com/content/groups/public/org/renjin/renjin-gnur-package/0.8.2424/renjin-gnur-package-0.8.2424.tar.gz")
 library(renjin)
 ```
