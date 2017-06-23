@@ -46,8 +46,8 @@ MathJaxVersion = "2.7.1"
     # This is optional, but it's suggested to use
 [params.intro]
     header    = "Nima Hejazi's blog"
-    paragraph = "stochastic musings on statistics, sense, and science"
-    about     = "Nima is a Biostatistics PhD student. His interests center around causal inference, nonparametric statistics, machine learning, and data science, with applications in the biomedical sciences."
+    paragraph = "stochastic musings on statistics, and some sense about science"
+    about     = "Nima is a Biostatistics PhD student. His interests center around nonparametric statistics, causal inference, machine learning, and data science, with applications in the health sciences."
 
     # This will also appear on the sidebar.
     # A width of less than 100px is recommended
