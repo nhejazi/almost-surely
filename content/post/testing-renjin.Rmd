@@ -23,9 +23,9 @@ about to devote a great deal of time to doing so, when -- fortuitously -- I came
 across the rather new [`renjin` project](http://www.renjin.org/). Renjin is a
 new (in-development) interpreter for GNU R that relies on the Java Virtual
 Machine (JVM) to enhance R's performance. The idea seems to be that it can
-eventually serve as a drop-in replacement for GNU R. It also seems that the
-`renjin` R package can be used with the standard GNU R interpreter to wrap
-existing R code and provide huge performance increases by using the JVM.
+eventually serve as a drop-in replacement for GNU R. It seems that the `renjin`
+R package can be used to provide performance gains via interfacing with the JVM,
+just by wrapping standard R code.
 
 ## Minimal example
 
@@ -66,8 +66,8 @@ Alright, now we're ready to compare the performances of the naive and
 bytecode-compiled implementations:
 
 ```{r reg_times}
-time_norm <- system.time(bigsum(1e8))
-time_comp <- system.time(bigsumc(1e8))
+time_norm <- system.time(bigsum(1e7))
+time_comp <- system.time(bigsumc(1e7))
 ```
 
 Notice that directly using R's native bytecode compiler improves the performance
@@ -78,7 +78,7 @@ spends on the computation, we save about
 more?
 
 ```{r renjin}
-time_renjin <- system.time(renjin(bigsum(1e8)))
+time_renjin <- system.time(renjin(bigsum(1e7)))
 ```
 
 ```{r table}
@@ -92,12 +92,12 @@ print(table)
 Wow -- just, wow. The gain in computational efficiency here is incredible! Using
 `renjin` -- even just as a wrapper -- improves the time cost (on the system
 side) by a factor of `r round(table[1, 2] / table[3, 2], 0)` relative to the
-naive implementation and by quite a bit still (a factor of
-`r round(table[2, 2] / table[3, 2], 0)`) when compared to the bytecode-compiled
-version of our function. Damn -- I'm at a loss for words. This was just a simple
-example, but we were able to save so much computational time just by naively
-calling `renjin`...and it took just a few extra characters to call it as a
-wrapper...
+naive implementation and by quite a bit still (__a factor of
+`r round(table[2, 2] / table[3, 2], 0)`__) when compared to the
+bytecode-compiled version of our function. Damn -- I'm at a loss for words. This
+was just a simple example, but we were able to save so much computational time
+just by naively calling `renjin`...and it took just a few extra characters to
+call it as a wrapper...
 
 Although Renjin is still in its infancy, I can't help but be excited for the
 future of R -- and statistical computing in general -- with how well its already
