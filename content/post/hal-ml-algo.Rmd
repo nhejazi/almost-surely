@@ -1,5 +1,5 @@
 +++
-date = "2017-06-22"
+date = "2017-07-05"
 author = "Nima Hejazi"
 title = "the highly adaptive LASSO estimator"
 summary = "Discussion of HAL's statistical properties, and speeding it up"

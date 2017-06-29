@@ -1,7 +1,7 @@
 ---
-date: "2017-06-14"
+date: "2017-06-29"
 author: "Nima Hejazi"
-title: "renjin: speeding up R with Java"
+title: "renjin: put some Java in your R"
 type: "post"
 categories: [ "R", "blog", "tools", "productivity", "computing" ]
 
@@ -29,15 +29,22 @@ existing R code and provide huge performance increases by using the JVM.
 
 ## Minimal example
 
-I just thought I would try the example from the `renjin` R package documentation
-out, before moving on to more involved examples. Here we go:
+For now, I just thought I would try the example from the `renjin` R package
+documentation, more involved examples might be added to this post later or come
+in separate blog posts of their own. Here we go:
 
-```{r, eval=FALSE}
-install.packages("https://nexus.bedatadriven.com/content/groups/public/org/renjin/renjin-gnur-package/0.8.2424/renjin-gnur-package-0.8.2424.tar.gz")
+Let's make sure we have the newest version of Renjin:
+
+```{r install}
+if (!require(renjin)) {
+install.packages("https://nexus.bedatadriven.com/content/groups/public/org/renjin/renjin-gnur-package/0.8.2404/renjin-gnur-package-0.8.2404.tar.gz")
+}
 library(renjin)
 ```
 
-```{r}
+Let's define a function to simply add by iteration:
+
+```{r bigsum}
 bigsum <- function(n) {
   sum <- 0
   for(i in seq(from = 1, to = n)) {
@@ -45,22 +52,54 @@ bigsum <- function(n) {
   }
   sum
 }
+```
 
+We can improve the speed of this function by pre-compiling it to bytecode using
+R's native bytecode compiler. We'd expect this to save us some time relative to
+the naive implementation.
+
+```{r cmpfun}
 bigsumc <- compiler::cmpfun(bigsum) # GNU R's byte code compiler
-
-system.time(bigsum(1e5))
-system.time(bigsumc(1e5))
 ```
 
-From the above, we notice that directly using the bytecode compiler improves
-performance of our `bigsum` function. Maybe `renjin` can help out even more?
+Alright, now we're ready to compare the performances of the naive and
+bytecode-compiled implementations:
 
-```{r, eval=FALSE}
-tryCatch(system.time(renjin(bigsum(1e5))), function(e) print("error"))
-
-renjin(bigsum(1e5))
+```{r reg_times}
+time_norm <- system.time(bigsum(1e8))
+time_comp <- system.time(bigsumc(1e8))
 ```
 
-Well, it looks like `renjin` isn't quite ready for prime time. It seems to [fail
-when acting on bytecode compiled functions (the standard in GNU R
-3.4+)](https://twitter.com/dselivanov_/status/874981607635124225).
+Notice that directly using R's native bytecode compiler improves the performance
+of our `bigsum` function quite a bit -- that is, considering the time the system
+spends on the computation, we save about
+`r round(abs(time_norm[2] - time_comp[2]), 2)` seconds, (roughly) a factor of
+`r round(time_norm[2] / time_comp[2], 0)`. Maybe `renjin` can help us out even
+more?
+
+```{r renjin}
+time_renjin <- system.time(renjin(bigsum(1e8)))
+```
+
+```{r table}
+table <- as.data.frame(rbind(as.numeric(time_norm), as.numeric(time_comp),
+                             as.numeric(time_renjin)))[, c(1, 2, 3)]
+colnames(table) <- c("user", "system", "total")
+rownames(table) <- c("naive", "cmpfun", "renjin")
+print(table)
+```
+
+Wow -- just, wow. The gain in computational efficiency here is incredible! Using
+`renjin` -- even just as a wrapper -- improves the time cost (on the system
+side) by a factor of `r round(table[1, 2] / table[3, 2], 0)` relative to the
+naive implementation and by quite a bit still (a factor of
+`r round(table[2, 2] / table[3, 2], 0)`) when compared to the bytecode-compiled
+version of our function. Damn -- I'm at a loss for words. This was just a simple
+example, but we were able to save so much computational time just by naively
+calling `renjin`...and it took just a few extra characters to call it as a
+wrapper...
+
+Although Renjin is still in its infancy, I can't help but be excited for the
+future of R -- and statistical computing in general -- with how well its already
+performing. We're going to be able to (try to) do great things with these new
+tools `r emo::ji("awesome")`
