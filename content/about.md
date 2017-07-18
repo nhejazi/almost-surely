@@ -1,6 +1,6 @@
 +++
 date = "2016-02-01"
-title = "Almost Surely: stochastic musings on statistics, and some sense about science"
+title = "Almost Surely: stochastic musings on statistics and some sense about science"
 +++
 
 "Reading maketh a full man; conference a ready man; and writing an exact man."

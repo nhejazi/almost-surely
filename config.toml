@@ -13,7 +13,7 @@ MathJaxVersion = "2.7.1"
 [params]
     author               = "Nima Hejazi"
     # Sets the meta tag description, usually reserved for the main page
-    description          = "stochastic musings on statistics, and some sense about science"
+    description          = "Nima's collected ramblings on statistics and science"
     # This will appear on the top left of the navigation bar
     navbarTitle          = "Nima Hejazi's blog"
     # Social media buttons that appear on the sidebar
@@ -46,7 +46,7 @@ MathJaxVersion = "2.7.1"
     # This is optional, but it's suggested to use
 [params.intro]
     header    = "Nima Hejazi's blog"
-    paragraph = "stochastic musings on statistics, and some sense about science"
+    paragraph = "stochastic musings on statistics and some sense about science"
     about     = "Nima is a Biostatistics PhD student. His interests center around nonparametric statistics, causal inference, machine learning, and data science, with applications in the health sciences."
 
     # This will also appear on the sidebar.
