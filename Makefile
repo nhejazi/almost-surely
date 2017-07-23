@@ -15,5 +15,5 @@ deploy:
 # to create a new post with a particular title:
 # make new TITLE="blah blah blah"
 new:
-	Rscript -e 'blogdown::new_post(title="\"$(TITLE)\"",author="Nima",rmd=TRUE)'
+	Rscript -e "blogdown::new_post(title='\'$(TITLE)\'', author='Nima', rmd=T)"
 	nvim content/post/
