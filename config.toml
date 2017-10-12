@@ -1,6 +1,6 @@
 baseurl = "http://nimahejazi.org/blog/"
 languageCode = "en-us"
-title = "Nima Hejazi's blog"
+title = "Almost Surely..."
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
@@ -13,14 +13,14 @@ MathJaxVersion = "2.7.1"
 [params]
     author               = "Nima Hejazi"
     # Sets the meta tag description, usually reserved for the main page
-    description          = "Nima's collected ramblings on statistics and science"
+    description          = "Nima's musings on statistics and modern science"
     # This will appear on the top left of the navigation bar
-    navbarTitle          = "Nima Hejazi's blog"
+    navbarTitle          = "Almost Surely..."
     # Social media buttons that appear on the sidebar
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/blog/post" # NOTE: does not respect baseURL
+    viewMorePostLink     = "/blog/post/" # NOTE: does not respect baseURL
 
     # Optional Params
     categoriesByCount    = true
@@ -45,9 +45,9 @@ MathJaxVersion = "2.7.1"
     # parms.intro will appear on the sidebar
     # This is optional, but it's suggested to use
 [params.intro]
-    header    = "Nima Hejazi's blog"
-    paragraph = "stochastic musings on statistics and some sense about science"
-    about     = "Nima is a Biostatistics PhD student. His interests center around nonparametric statistics, causal inference, machine learning, and data science, with applications in the health sciences."
+    header    = "Almost Surely..."
+    paragraph = "musings on statistics and science by Nima Hejazi"
+    about     = "Nima is a Biostatistics PhD student. His interests center around causal inference, nonparametric statistics and machine learning, and statistical computing, with applications in the biomedical sciences."
 
     # This will also appear on the sidebar.
     # A width of less than 100px is recommended
@@ -130,3 +130,4 @@ MathJaxVersion = "2.7.1"
     twitter_domain  = ""
     twitter         = "nshejazi"
     email           = "nh@nimahejazi.org"
+
