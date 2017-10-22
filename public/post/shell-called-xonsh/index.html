@@ -1,0 +1,1035 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>a shell called xonsh</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.30.2" />
+        
+    
+        
+    
+
+    
+
+    <link rel="apple-touch-icon-precomposed"
+        href='/favicon/apple-touch-icon-precomposed.png'>
+    <link rel="icon" href='/favicon/favicon.png'>
+    
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage"
+        content='/favicon/mstile.png'>
+
+
+
+        
+            <meta name="author" content="Nima Hejazi">
+        
+        
+            
+                <meta name="description" content="Nima&#39;s musings on statistics and modern science">
+            
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="a shell called xonsh"/>
+<meta name="twitter:description" content="Any computational scientist who spends their time writing and using tools or analyzing data has certainly had to spend a great deal of his/her time interacting with a command line interface (as an aside, I at one point spent so much time staring at the command line that I wrote a set of scripts to provide me with comical quotes to break up the monotony of my work &ndash; it can be found here)."/>
+<meta name="twitter:site" content="@nshejazi"/>
+
+        <meta property="og:title" content="a shell called xonsh" />
+<meta property="og:description" content="Any computational scientist who spends their time writing and using tools or analyzing data has certainly had to spend a great deal of his/her time interacting with a command line interface (as an aside, I at one point spent so much time staring at the command line that I wrote a set of scripts to provide me with comical quotes to break up the monotony of my work &ndash; it can be found here)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://nimahejazi.org/blog/post/shell-called-xonsh/" />
+
+
+
+<meta property="article:published_time" content="2016-06-25T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-06-25T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="a shell called xonsh">
+<meta itemprop="description" content="Any computational scientist who spends their time writing and using tools or analyzing data has certainly had to spend a great deal of his/her time interacting with a command line interface (as an aside, I at one point spent so much time staring at the command line that I wrote a set of scripts to provide me with comical quotes to break up the monotony of my work &ndash; it can be found here).">
+
+
+<meta itemprop="datePublished" content="2016-06-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-06-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="408">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+        <link rel="stylesheet" href=/blog/css/google-font.css />
+        <link rel="stylesheet" href=/blog/css/font-awesome.min.css />
+        <link rel="stylesheet" href=/blog/css/main.css />
+        <link rel="stylesheet" href=/blog/css/add-on.css />
+        <link rel="stylesheet" href=/blog/css/monokai-sublime.css />
+        <link rel="stylesheet" href=/blog/css/ref-popover.css />
+        
+
+        
+
+        
+        
+        
+            
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-67244126-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+        
+    </head>
+
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <body>
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+    <h2><a href="/blog/">Almost Surely...</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/blog/post">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Posts
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/categories">
+                        
+                            <i class="fa fa-list">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/about">
+                        
+                            <i class="fa fa-info">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://www.stat.berkeley.edu/~nhejazi/hejazi-cv.pdf">
+                        
+                            <i class="fa fa-user">&nbsp;</i>CV
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://nimahejazi.org">
+                        
+                            <i class="fa fa-reply">&nbsp;</i>Main
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://nimahejazi.org/blog/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://nimahejazi.org/blog/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/blog/post">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Posts
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-list">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/about">
+                            <h3>
+                                
+                                    <i class="fa fa-info">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.stat.berkeley.edu/~nhejazi/hejazi-cv.pdf">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                CV
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="http://nimahejazi.org">
+                            <h3>
+                                
+                                    <i class="fa fa-reply">&nbsp;</i>
+                                
+                                Main
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://nimahejazi.org/blog/post/testing-renjin/"><p>renjin: put some Java in your R</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://nimahejazi.org/blog/post/trying-blogdown/"><p>taking blogdown for a test drive</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://nimahejazi.org/blog/post/shell-called-xonsh/"><p>a shell called xonsh</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://nimahejazi.org/blog/post/love-a-tool-atom/"><p>how to love a tool - atom</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&text=a%20shell%20called%20xonsh&via=nshejazi" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&title=a%20shell%20called%20xonsh" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&title=a%20shell%20called%20xonsh" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&title=a%20shell%20called%20xonsh" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Nima%20Hejazi&body=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://nimahejazi.org/blog/post/shell-called-xonsh/">a shell called xonsh</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-06-25'>
+            June 25, 2016</time>
+        <span class="author">Nima Hejazi</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&text=a%20shell%20called%20xonsh&via=nshejazi" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&title=a%20shell%20called%20xonsh" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&title=a%20shell%20called%20xonsh" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f&title=a%20shell%20called%20xonsh" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Nima%20Hejazi&body=http%3a%2f%2fnimahejazi.org%2fblog%2fpost%2fshell-called-xonsh%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+
+    
+
+    <div id="content">
+        <p>Any computational scientist who spends their time writing and using tools or
+analyzing data has certainly had to spend a great deal of his/her time
+interacting with a command line interface (as an aside, I at one point spent so
+much time staring at the command line that I wrote a set of scripts to provide
+me with comical quotes to break up the monotony of my work &ndash; it can be found
+<a href="https://github.com/nhejazi/good-news">here</a>). Despite the extensive use that
+it sees, shell languages that operate from a terminal (or from the command line)
+are rather few in number; moreover, the vast majority of such languages sport
+syntax that is nearly mind-numbing (and have steep learning curves, making them
+incredibly unfriendly to new practitioners). To solve this problem, the
+<a href="http://xon.sh/">xonsh</a> shell has recently been developed, taking
+<a href="https://www.python.org/">python</a> as inspiration for implementing its scripting
+language.</p>
+
+<p>By clever use of some of Python&rsquo;s existing modules, and a great deal of work,
+the community around xonsh has been able to successfully provide a shell that is
+ideally suited to the purposes of most computational scientists, from
+statisticians to physicists, and beyond. Though xonsh is rather new and will
+certainly undergo a great deal of further development, it is already mature
+enough for use for most day-to-day purposes. I&rsquo;ve even adopted it as a secondary
+shell for most of my own work&hellip;</p>
+
+<p>Though xonsh will certainly not replace the likes of <a href="https://www.gnu.org/software/bash/">GNU
+Bash</a> anytime in the near future, the
+friendly (pythonic) syntax, support of python modules from a command line
+interface, and development of new tools for extending its capabilities certainly
+provides xonsh with numerous advantages over bash. Look, you can make histograms
+(and view them easily) in the terminal with
+<a href="https://github.com/glamp/bashplotlib">bashplotlib</a>! Or, perhaps even better (so
+good, I gave it a whole blog post already), you can have automatic GitHub
+completion in your terminal with
+<a href="https://github.com/donnemartin/gitsome">gitsome</a>, which is based on the python
+REPL used by xonsh.</p>
+
+<p>Want to install xonsh and use it for your own (&hellip;and maybe some of these other
+tools too)? <em>Easy.</em> <strong>Just use <code>pip</code> with your Python 3.4+.</strong> That&rsquo;s right,
+they&rsquo;re all on <a href="https://pypi.python.org/pypi">PyPi</a>.</p>
+
+<p>On most machines, installing xonsh and gitsome is as easy as:</p>
+
+<pre><code class="language-bash">pip3 install xonsh
+pip3 install gitsome
+</code></pre>
+
+<p>Now that I&rsquo;ve finished with my goal of promoting/praising xonsh and gitsome as
+best as I know how, it&rsquo;s probably best to wrap this post up. Until my next
+post &ndash; <em>cheers</em>.</p>
+
+<p><strong><em>last updated: 25 June 2016</em></strong></p>
+
+    </div>
+
+    <footer>
+        
+<ul class="stats">
+
+<ul class="stats">
+  
+      
+
+      
+      
+          <li>
+              
+              
+                  
+
+                  
+
+                  
+                      <i class="fa fa-list">&nbsp;</i>
+                  
+
+                  
+                      Categories
+                  
+              
+          </li>
+      
+    
+    
+    
+    <li><a href="/blog/categories/tools">tools</a></li>
+    
+    <li><a href="/blog/categories/productivity">productivity</a></li>
+    
+    <li><a href="/blog/categories/computing">computing</a></li>
+    
+</ul>
+<ul class="stats">
+    
+
+      
+      
+</ul>
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="http://nimahejazi.org/blog/post/love-a-tool-atom/"
+                class="button big previous">how to love a tool - atom</a></li>
+    
+
+    
+        <li><a href="http://nimahejazi.org/blog/post/trying-blogdown/"
+                class="button big next">taking blogdown for a test drive</a></li>
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nhejazi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                <a href="/blog/" class="logo"><img src="/blog/img/main/avatar.jpg" alt="" /></a>
+                
+            
+            
+                <header>
+                    <h2>Almost Surely...</h2>
+                    <p>musings on statistics and science by Nima Hejazi</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/nhejazi" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/nshejazi" target="_blank" title="Instagram" class="fa fa-instagram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/nshejazi" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+<li><a href="//stackoverflow.com/users/nhejazi" target="_blank" title="Stack Overflow" class="fa fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="//facebook.com/nima.hejazi" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+<li><a href="//twitter.com/nshejazi" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+<li><a href="mailto:nh@nimahejazi.org" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://nimahejazi.org/blog/post/testing-renjin/">renjin: put some Java in your R</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-06-29'>
+                                    June 29, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://nimahejazi.org/blog/post/trying-blogdown/">taking blogdown for a test drive</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2017-05-29'>
+                                    May 29, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://nimahejazi.org/blog/post/shell-called-xonsh/">a shell called xonsh</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-06-25'>
+                                    June 25, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://nimahejazi.org/blog/post/love-a-tool-atom/">how to love a tool - atom</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-05-25'>
+                                    May 25, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /blog/post/
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/blog/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/computing">computing</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/productivity">productivity</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/tools">tools</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/r">R</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/data-science">data science</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/blog">blog</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/not-so-standard-deviations">not so standard deviations</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/quantified-self">quantified self</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/text-editors">text editors</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/23andme">23andMe</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/biometrics">biometrics</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/fitbit">fitbit</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/genomics">genomics</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/blog/categories/graphics">graphics</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>Nima is a Biostatistics PhD student. His interests center around causal inference, nonparametric statistics and machine learning, and statistical computing, with applications in the biomedical sciences.</p>
+
+            <ul class="actions">
+                <li><a href="/blog/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/nhejazi" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/nshejazi" target="_blank" title="Instagram" class="fa fa-instagram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/nshejazi" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+<li><a href="//stackoverflow.com/users/nhejazi" target="_blank" title="Stack Overflow" class="fa fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="//facebook.com/nima.hejazi" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+<li><a href="//twitter.com/nshejazi" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+<li><a href="mailto:nh@nimahejazi.org" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; 2017 Almost Surely...<br>
+            Powered by <a href="//gohugo.io" target="_blank">Hugo</a><br>
+            Design: Modified from <a href="//github.com/jpescador" target="_blank">Julio Pescador's</a> port of the <a href="//html5up.net" target="_blank">HTML5 UP</a> <a href="//html5up.net/future-imperfect" target="_blank">Future Imperfect</a> theme.<br /></p>
+            
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src=/blog/js/jquery.min.js></script>
+            <script src=/blog/js/skel.min.js></script>
+            <script src=/blog/js/util.js></script>
+            <script src=/blog/js/main.js></script>
+            <script src=/blog/js/backToTop.js></script>
+            <script src=/blog/js/highlight.pack.js></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+
+    <script>
+      jQuery(function() {
+        jQuery(".refbody").hide();
+        jQuery(".refnum").click(function(event) {
+          jQuery(this.nextSibling).toggle();
+          event.stopPropagation();
+        });
+        jQuery("body").click(function(event) {
+          jQuery(".refbody").hide();
+        });
+      });
+    </script>
+
+
+
+
+    </body>
+</html>
+

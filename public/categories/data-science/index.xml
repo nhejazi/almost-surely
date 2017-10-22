@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data science on Almost Surely...</title>
+    <link>http://nimahejazi.org/blog/categories/data-science/</link>
+    <description>Recent content in Data science on Almost Surely...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nimahejazi.org/blog/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R graphics - ggplot versus base</title>
+      <link>http://nimahejazi.org/blog/post/r-graphics-ggplot-v-base/</link>
+      <pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/r-graphics-ggplot-v-base/</guid>
+      <description>In the past several weeks, something of a debate has emerged regarding whether, in fact, there is a superior plotting system in R. First, a bit of history. The arguments on plotting all began with an off-hand comment about the plotting preferences of statistician and JHU Professor Jeff Leek, on the &amp;ldquo;Not So Standard Deviations&amp;rdquo; podcast of Hilary Parker and Roger Peng. The comment, as I remember it, had to do with why anyone would ever bother to use base graphics in R when a tool like ggplot2 exists.</description>
+    </item>
+    
+    <item>
+      <title>quantified self with Fitbit, part 1</title>
+      <link>http://nimahejazi.org/blog/post/quantified-self-fitbit-1/</link>
+      <pubDate>Thu, 21 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/quantified-self-fitbit-1/</guid>
+      <description>An interesting phenomenon that has appeared in recent years is the notion of &amp;ldquo;Quantified Self&amp;rdquo; - simply the idea that quantifying much of our daily activity can lead to insights about our behaviors, and that a more thorough knowledge of our own behavior can help us to be more mindful of our health and lifestyle choices. In a previous post, I explored (in a very rudimentary fashion) information about my genome, in the form of single nucleotide polymorphisms sequenced by 23andMe™.</description>
+    </item>
+    
+    <item>
+      <title>drunk driving with spreadsheets</title>
+      <link>http://nimahejazi.org/blog/post/drunk-driving-with-spreadsheets/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/drunk-driving-with-spreadsheets/</guid>
+      <description>Recently, while listening to an episode of the podcast &amp;ldquo;Not So Standard Deviations&amp;rdquo;, by Roger Peng and Hilary Parker, the line &amp;ldquo;Doing data analysis with spreadsheets is like driving drunk&amp;rdquo; (attributed to statistician Philip Stark) stood out to me. This short phrase gets at the very notion of how very irresponsible the use of spreadsheets is for many of the routine tasks of data science. That is, spreadsheets provide a high level of accessibility to the data that is so central to the insights extracted by data scientists &amp;ndash; and, it is this high level of control over the data itself that makes their use so very dangerous.</description>
+    </item>
+    
+  </channel>
+</rss>

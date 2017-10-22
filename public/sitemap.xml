@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/testing-renjin/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/trying-blogdown/</loc>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/shell-called-xonsh/</loc>
+    <lastmod>2016-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/love-a-tool-atom/</loc>
+    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/love-a-tool-gitsome/</loc>
+    <lastmod>2016-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/love-a-tool-neovim/</loc>
+    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/r-graphics-ggplot-v-base/</loc>
+    <lastmod>2016-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/quantified-self-fitbit-1/</loc>
+    <lastmod>2016-04-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/snooping-thru-my-snps-1/</loc>
+    <lastmod>2016-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/drunk-driving-with-spreadsheets/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/about/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/hal-ml-algo/</loc>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/23andme/</loc>
+    <lastmod>2016-03-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/biometrics/</loc>
+    <lastmod>2016-04-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/blog/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/</loc>
+    <lastmod>2016-03-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/computing/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/data-science/</loc>
+    <lastmod>2016-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/fitbit/</loc>
+    <lastmod>2016-04-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/genomics/</loc>
+    <lastmod>2016-03-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/graphics/</loc>
+    <lastmod>2016-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/not-so-standard-deviations/</loc>
+    <lastmod>2016-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/post/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/productivity/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/quantified-self/</loc>
+    <lastmod>2016-04-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/r/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/text-editors/</loc>
+    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nimahejazi.org/blog/categories/tools/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Almost Surely...</title>
+    <link>http://nimahejazi.org/blog/categories/blog/</link>
+    <description>Recent content in Blog on Almost Surely...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nimahejazi.org/blog/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>renjin: put some Java in your R</title>
+      <link>http://nimahejazi.org/blog/post/testing-renjin/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/testing-renjin/</guid>
+      <description>R is a great, highly flexible language for statistical computing, but it does suffer greatly from performance issues. As I’ve steadily increase my use of R, I quickly became aware that I would have to one day learn to integrate R with a programming language with better performance, the main choice here being C++. To integrate R with C++, the Rcpp framework (and R package) was created, allowing for parts of the R code of a given package or project to be re-written in C++ and easily integrated with R.</description>
+    </item>
+    
+    <item>
+      <title>taking blogdown for a test drive</title>
+      <link>http://nimahejazi.org/blog/post/trying-blogdown/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/trying-blogdown/</guid>
+      <description>Recently, I came across the blogdown R package, a variant of RStudio’s popular bookdown R package, made by Yihui Xie and Amber Thomas. Blogdown allows the user to write blog posts with code chunks, in any of the large variety of languages supported by RMarkdown, allowing for computationally reproducible writing and programming. It also plays well with the new static site engine Hugo. Here, I’m mostly just going to take blogdown for a spin.</description>
+    </item>
+    
+  </channel>
+</rss>

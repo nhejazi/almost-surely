@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graphics on Almost Surely...</title>
+    <link>http://nimahejazi.org/blog/categories/graphics/</link>
+    <description>Recent content in Graphics on Almost Surely...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nimahejazi.org/blog/categories/graphics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R graphics - ggplot versus base</title>
+      <link>http://nimahejazi.org/blog/post/r-graphics-ggplot-v-base/</link>
+      <pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/r-graphics-ggplot-v-base/</guid>
+      <description>In the past several weeks, something of a debate has emerged regarding whether, in fact, there is a superior plotting system in R. First, a bit of history. The arguments on plotting all began with an off-hand comment about the plotting preferences of statistician and JHU Professor Jeff Leek, on the &amp;ldquo;Not So Standard Deviations&amp;rdquo; podcast of Hilary Parker and Roger Peng. The comment, as I remember it, had to do with why anyone would ever bother to use base graphics in R when a tool like ggplot2 exists.</description>
+    </item>
+    
+  </channel>
+</rss>

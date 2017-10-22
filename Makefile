@@ -1,14 +1,11 @@
 .PHONY : all
-all: build deploy
+all: build
 
 build:
 	Rscript -e "blogdown::build_site()"
 
 serve:
 	Rscript -e "blogdown::serve_site()"
-
-deploy:
-	sh deploy.sh
 
 # default post title
 # TITLE="title"
@@ -17,3 +14,4 @@ deploy:
 new:
 	Rscript -e "blogdown::new_post(title='\'$(TITLE)\'', author='Nima', rmd=T)"
 	nvim content/post/
+

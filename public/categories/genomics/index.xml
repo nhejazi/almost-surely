@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genomics on Almost Surely...</title>
+    <link>http://nimahejazi.org/blog/categories/genomics/</link>
+    <description>Recent content in Genomics on Almost Surely...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Mar 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nimahejazi.org/blog/categories/genomics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>snooping through my SNPs, part 1</title>
+      <link>http://nimahejazi.org/blog/post/snooping-thru-my-snps-1/</link>
+      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/snooping-thru-my-snps-1/</guid>
+      <description>In recent years, the growing trend of personal genomics has spawned its own industry, with several companies now offering to sequence the genomes of individuals, with some even providing health analytics and ancestry information. A couple years ago, I sent a sample of my own DNA (via saliva) to 23andMe, Inc.; this sample was then used to perform sequencing on single nucleotide polymorphisms (SNPs) in my genome &amp;ndash; and to provide me with a wealth of information about potential disease risks and ancestry.</description>
+    </item>
+    
+  </channel>
+</rss>

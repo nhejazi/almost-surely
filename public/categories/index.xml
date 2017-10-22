@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Almost Surely...</title>
+    <link>http://nimahejazi.org/blog/categories/</link>
+    <description>Recent content in Categories on Almost Surely...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Mar 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nimahejazi.org/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>23andMe</title>
+      <link>http://nimahejazi.org/blog/categories/23andme/</link>
+      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/23andme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Biometrics</title>
+      <link>http://nimahejazi.org/blog/categories/biometrics/</link>
+      <pubDate>Thu, 21 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/biometrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>http://nimahejazi.org/blog/categories/blog/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computing</title>
+      <link>http://nimahejazi.org/blog/categories/computing/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data science</title>
+      <link>http://nimahejazi.org/blog/categories/data-science/</link>
+      <pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fitbit</title>
+      <link>http://nimahejazi.org/blog/categories/fitbit/</link>
+      <pubDate>Thu, 21 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/fitbit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genomics</title>
+      <link>http://nimahejazi.org/blog/categories/genomics/</link>
+      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/genomics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graphics</title>
+      <link>http://nimahejazi.org/blog/categories/graphics/</link>
+      <pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Not so standard deviations</title>
+      <link>http://nimahejazi.org/blog/categories/not-so-standard-deviations/</link>
+      <pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/not-so-standard-deviations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>http://nimahejazi.org/blog/categories/productivity/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantified self</title>
+      <link>http://nimahejazi.org/blog/categories/quantified-self/</link>
+      <pubDate>Thu, 21 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/quantified-self/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>http://nimahejazi.org/blog/categories/r/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text editors</title>
+      <link>http://nimahejazi.org/blog/categories/text-editors/</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/text-editors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://nimahejazi.org/blog/categories/tools/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

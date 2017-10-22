@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text editors on Almost Surely...</title>
+    <link>http://nimahejazi.org/blog/categories/text-editors/</link>
+    <description>Recent content in Text editors on Almost Surely...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nimahejazi.org/blog/categories/text-editors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>how to love a tool - atom</title>
+      <link>http://nimahejazi.org/blog/post/love-a-tool-atom/</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/love-a-tool-atom/</guid>
+      <description>As part of the series of posts on computational tools that I have grown to love (&amp;ldquo;How to Love a Tool&amp;hellip;&amp;rdquo;), here, I am going to talk about the Atom text editor, developed rather recently by GitHub. Unlike the other text editor I discussed in this series of blog posts - the awesome and minimal Neovim - Atom is designed to be &amp;ldquo;a hackable text editor for the 21st Century,&amp;rdquo; built mostly on web-based technologies (e.</description>
+    </item>
+    
+    <item>
+      <title>how to love a tool - neovim</title>
+      <link>http://nimahejazi.org/blog/post/love-a-tool-neovim/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nimahejazi.org/blog/post/love-a-tool-neovim/</guid>
+      <description>Recently, I decided to look for new tools to improve my work efficiency, and very early in the endeavor to find new and better tools, I came across the fairly recent Neovim project. The aim of Neovim is to accomplish a full re-factoring of the source code of Vim, one of the oldest and most popular extensible text editors; this is sort of a big deal because Vim has historically been maintained only by its creator Bram Moolenaar, and not every change made to Vim has been done in a forward-thinking manner.</description>
+    </item>
+    
+  </channel>
+</rss>
