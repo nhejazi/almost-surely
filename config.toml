@@ -1,4 +1,4 @@
-baseurl = "http://nimahejazi.org/blog/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Almost Surely..."
 theme = "hugo-future-imperfect"
@@ -21,7 +21,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     socialAppearAtTop    = true
     socialAppearAtBottom = true
     # set this to the section name if section is not post
-    viewMorePostLink     = "/blog/post/" # NOTE: does not respect baseURL
+    viewMorePostLink     = "/post/" # NOTE: does not respect baseURL
 
     # Optional Params
     categoriesByCount    = true
@@ -104,7 +104,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 # The social media icons will appear on the sidebar
 [social]
     github          = "nhejazi"
-    bitbucket       = ""
+    bitbucket       = "nhejazi"
     jsfiddle        = ""
     codepen         = ""
     foursquare      = ""
