@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://blog.nimahejazi.org/"
 languageCode = "en-us"
 title = "Almost Surely..."
 theme = "hugo-future-imperfect"
