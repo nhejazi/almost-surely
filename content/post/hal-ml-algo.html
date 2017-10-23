@@ -1,0 +1,11 @@
+
+
+
+<p>+++ date = “2017-07-05” author = “Nima Hejazi” title = “the highly adaptive LASSO estimator” summary = “Discussion of HAL’s statistical properties, and speeding it up” categories = [ “statistics”, “machine learning”, “computing” ] comments = false draft = true</p>
+<p>+++</p>
+<div id="the-highly-adaptive-lasso-hal" class="section level2">
+<h2>The Highly Adaptive LASSO (HAL)</h2>
+<p>Recent developments in statistical machine learning and causal inference led to a very interesting new estimation algorithm (called the highly adaptive LASSO) being proposed by D.C. Benkeser and M.J. van der Laan. Due to the intensive nature of this estimation algorithm, it can take quite a long time to run, becoming infeasible rather quickly, as the dimensionality of a data set of interest grows. Initial plans included integrating <code>hal</code> with <code>rcpp</code> in order to boost performance, which would require that parts of the <code>hal</code> codebase be re-written in C++ via the Rcpp framework. I thought <code>renjin</code> might be able to help out with this. Here goes:</p>
+<pre class="r"><code>library(hal)</code></pre>
+<p>To be continued…</p>
+</div>

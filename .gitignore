@@ -1,5 +1,3 @@
-content/post/*.html
-static/post/
 public/*
 _cache/
 .Rproj.user

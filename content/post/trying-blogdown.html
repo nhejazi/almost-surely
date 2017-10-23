@@ -1,0 +1,86 @@
+---
+date: "2017-05-29"
+author: "Nima Hejazi"
+title: "taking blogdown for a test drive"
+type: "post"
+categories: [ "R", "blog", "tools", "productivity", "computing" ]
+
+---
+
+
+
+<p>Recently, I came across the <a href="https://bookdown.org/yihui/blogdown/">blogdown R package</a>, a variant of RStudio’s popular <a href="https://bookdown.org/yihui/bookdown/">bookdown R package</a>, made by Yihui Xie and Amber Thomas. Blogdown allows the user to write blog posts with code chunks, in any of the large variety of languages supported by RMarkdown, allowing for computationally reproducible writing and programming. It also plays well with the new static site engine <a href="https://gohugo.io/">Hugo</a>. Here, I’m mostly just going to take <code>blogdown</code> for a spin.</p>
+<p>First, let’s generate some data and try doing some very simple summary statistics:</p>
+<pre class="r"><code># we&#39;re going to be simulating...set seed and constants
+set.seed(6142)
+n &lt;- 1000
+tx_mean &lt;- 25
+
+# generate variables randomly and by structural equation
+W &lt;- replicate(3, rnorm(n))
+A &lt;- rnorm(n, mean = tx_mean, sd = 2*sqrt(tx_mean))
+Y &lt;- as.numeric(A &gt; tx_mean &amp; W[, 1] &gt; 0)
+O &lt;- as.data.frame(cbind(Y, A, W))
+colnames(O) &lt;- c(&quot;Y&quot;, &quot;A&quot;, paste0(&quot;W&quot;, seq_len(3)))
+head(O)</code></pre>
+<pre><code>##   Y        A         W1         W2         W3
+## 1 1 28.40771  1.6361789  0.3361618  2.2859933
+## 2 1 43.26174  2.0236876  0.3815559  0.1296723
+## 3 1 30.45214  0.1319931  0.3985546  0.7973811
+## 4 0 23.52230 -0.4502451  0.7176603 -1.0905016
+## 5 1 29.88353  1.7895223 -0.3369940  0.7153515
+## 6 0 21.33805  1.7653295 -0.8362112 -0.7107431</code></pre>
+<pre class="r"><code>skim(O)</code></pre>
+<pre><code>## Numeric Variables
+## # A tibble: 5 x 13
+##     var    type missing complete     n        mean        sd       min
+##   &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1     A numeric       0     1000  1000 25.18186636 9.7685295 -4.678917
+## 2    W1 numeric       0     1000  1000  0.04544250 0.9997996 -3.482909
+## 3    W2 numeric       0     1000  1000 -0.02480579 0.9891446 -3.677962
+## 4    W3 numeric       0     1000  1000 -0.02308091 1.0069851 -3.367710
+## 5     Y numeric       0     1000  1000  0.27100000 0.4446985  0.000000
+## # ... with 5 more variables: `25% quantile` &lt;dbl&gt;, median &lt;dbl&gt;, `75%
+## #   quantile` &lt;dbl&gt;, max &lt;dbl&gt;, hist &lt;chr&gt;</code></pre>
+<p>Look at that! In the above, we generate background covariates (<span class="math inline">\(W\)</span>) based on the standard Normal distribution, a treatment (<span class="math inline">\(A\)</span>) based on a Normal distribution with specified mean (<span class="math inline">\(\mu = 25\)</span>) and standard deviation (<span class="math inline">\(\sigma = 2 \cdot \sqrt{\mu} = 10\)</span>), and an outcome (<span class="math inline">\(Y\)</span>) based on a specified structural equation of the form:</p>
+<p><span class="math display">\[Y = I(A &gt; 25) \cdot I(W_1 &gt; 0),\]</span> for <span class="math inline">\(n = 100\)</span>.</p>
+<p>Having just recently returned from <a href="http://causal.unc.edu/acic2017/">ACIC ’17</a>, I have causal inference on my mind. You’ll notice that in specifying the data generating processes above, I provided a structural equation for <span class="math inline">\(Y\)</span> – now, let’s play with marginal structural models (MSMs) just a little bit:</p>
+<pre class="r"><code>msm &lt;- glm(Y ~ ., family = &quot;binomial&quot;, data = O)
+summary(msm)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = Y ~ ., family = &quot;binomial&quot;, data = O)
+## 
+## Deviance Residuals: 
+##      Min        1Q    Median        3Q       Max  
+## -2.67224  -0.38138  -0.10080   0.07985   2.31857  
+## 
+## Coefficients:
+##              Estimate Std. Error z value Pr(&gt;|z|)
+## (Intercept) -9.523376   0.687346 -13.855   &lt;2e-16
+## A            0.272499   0.021257  12.820   &lt;2e-16
+## W1           2.589087   0.200157  12.935   &lt;2e-16
+## W2           0.053711   0.119842   0.448    0.654
+## W3          -0.006588   0.108947  -0.060    0.952
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1168.50  on 999  degrees of freedom
+## Residual deviance:  516.94  on 995  degrees of freedom
+## AIC: 526.94
+## 
+## Number of Fisher Scoring iterations: 7</code></pre>
+<p>Above, we projected the observed data (<span class="math inline">\(O = (W, A, Y)\)</span>) onto a working MSM for the outcome, using a logistic regression with terms for all of the baseline covariates and the treatment. From the <code>summary</code> of the resultant <code>glm</code> object, we notice that the estimated coefficients for the terms corresponding to the treatment (<span class="math inline">\(A\)</span>) and first baseline covariate (<span class="math inline">\(W_1\)</span>) are statistically significant – recall that these were the variables we used in specifying the structural equation for <span class="math inline">\(Y\)</span> above.</p>
+<p>I think I’ll wrap up this experiment by trying some simple plotting:</p>
+<pre class="r"><code>p &lt;- ggplot(O, aes(A, Y)) + geom_point()
+p &lt;- p + stat_smooth(method = &quot;glm&quot;, method.args = list(family = &quot;binomial&quot;),
+                     formula = y ~ x)
+p &lt;- p + xlab(&quot;A (treatment)&quot;) + ylab(&quot;Y (outcome)&quot;) + theme_nima()
+print(p)</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:plots"></span>
+<img src="/post/trying-blogdown_files/figure-html/plots-1.png" alt="Logistic regression of A on Y" width="672" />
+<p class="caption">
+Figure 1: Logistic regression of A on Y
+</p>
+</div>
+<p>We can plot the relationship between the treatment and outcome using a logistic regression fit. Pretty awesome that <code>blogdown</code> supports such nice graphics so easily. In my old blog, I had to come up with a custom R script to use <code>knitr</code> to process <a href="http://rmarkdown.rstudio.com/">R Markdown</a> to standard markdown, allowing them to be rendered on my old <a href="https://jekyllrb.com/">Jekyll</a> blog. Glad I never have to do that again 👍</p>
