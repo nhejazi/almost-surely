@@ -1,4 +1,4 @@
-baseurl = "https://blog.nimahejazi.org/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Almost Surely..."
 theme = "hugo-future-imperfect"
@@ -95,7 +95,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "Main"
-    url = "http://nimahejazi.org"
+    url = "https://www.nimahejazi.org"
     identifier = "fa fa-reply"
     weight = 5
 

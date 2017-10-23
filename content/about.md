@@ -3,18 +3,19 @@ date = "2016-02-01"
 title = "Almost Surely: musings on statistics and science"
 +++
 
-This is a blog dedicated to exploring statistics, science, and their myriad
+This blog is dedicated to exploring statistics, science, and their myriad
 interactions in our modern world, as construed by [Nima
 Hejazi](http://nimahejazi.org). The scope is necessarily broad -- hopefully,
 ideas from nonparametric statistics, semiparametric theory, high-dimensional
-probability, machine learning, causal inference, information theory, modern
-optimization, statistical computing, data science, and applied statistics will
-all be explored in depth. The goal, nearly always, will be to explore the topic
-at hand with an eye towards the role that statistics ought to play in shaping
-science and policy in our modern world.
+probability, machine learning, causal inference, information theory,
+optimization, statistical computing, data science, applied statistics, and
+computational biology will be explored, to varying degrees of depth. In nearly
+all cases, the goal of a post will be to explore the topic at hand with an eye
+towards examining its relationship with statistics, science and policy.
 
-_At no time and under no circumstances are the ideas expressed here endorsed by
-my employer or any organization with which I may be affiliated._
+_At no time and under no circumstances are the ideas expressed here necessarily
+endorsed by any organization with which I may be affiliated, whether an
+employer, funding agency, or whatever else._
 
 _Trivialities_: Though it emerged rather whimsically, the name of this blog
 merits some explanation -- specifically, the term "almost surely", from the
