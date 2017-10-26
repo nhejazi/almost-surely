@@ -21,7 +21,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "Almost Surely..."
   # Sets where "View More Posts" links
-  viewMorePostLink     = "/posts/"
+  viewMorePostLink     = "/post/"
 
 # Optional Params
   # Sets navbarTitle to match the section of the website
@@ -84,7 +84,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params.postAmount]
 # Sets number of recent posts to show in the sidebar. The default value is 5.
-  sidebar = 5
+  sidebar = 7
 
 # Set up your menu items in the navigation bar
 # Identifier prepends a Font Awesome icon to the menu item
@@ -109,7 +109,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.main]]
     name = "Academic"
     url = "https://www.stat.berkeley.edu/~nhejazi"
-    identifier = "fa fa-info"
+    identifier = "fa fa-graduation-cap"
     weight = 4
 
 [[menu.main]]
