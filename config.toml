@@ -130,14 +130,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [social]
   # Coding Communities
   github          = "nhejazi"
-  gitlab          = ""
-  stackoverflow   = "nhejazi" # User Number
+  gitlab          = "nhejazi"
+  stackoverflow   = "6026746" # User Number
   bitbucket       = "nhejazi"
   jsfiddle        = ""
   codepen         = ""
   # Visual Art Communities
   deviantart      = ""
-  flickr          = "example"
+  flickr          = ""
   behance         = ""
   dribbble        = ""
   # Publishing Communities
