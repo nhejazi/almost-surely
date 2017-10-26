@@ -142,12 +142,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   dribbble        = ""
   # Publishing Communities
   wordpress       = ""
-  medium          = ""
+  medium          = "nshejazi"
   # Professional/Business Oriented Communities
   linkedin        = "nshejazi"
   foursquare      = ""
   xing            = ""
-  slideshare      = ""
+  slideshare      = "NimaHejazi1"
   # Social Networks
   facebook        = "nima.hejazi"
   googleplus      = ""
@@ -162,8 +162,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   instagram       = "nshejazi"
   tumblr          = ""
   twitter         = "nshejazi"
-  skype           = ""
-  snapchat        = ""
+  skype           = "live:nima.hejazi7"
+  snapchat        = "itsnima"
   pinterest       = ""
   telegram        = ""
   vine            = ""
