@@ -1,8 +1,8 @@
 +++
-date = "2017-06-01"
+date = "2017-12-29"
 author = "Nima Hejazi"
-title = "2017 - a mid-year review"
-summary = "Review of productivity and graduate school in the first half of 2017"
+title = "2017 - year in review"
+summary = "Review of productivity and graduate school life in 2017"
 categories = [ "statistics", "graduate school", "productivity" ]
 comments = false
 published = false

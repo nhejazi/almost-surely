@@ -4,10 +4,69 @@ author: "Nima Hejazi"
 title: "sl3: Machine Learning Pipelines for R"
 type: "post"
 categories: [ "R", "data science", "machine learning", "computing" ]
+comments: false
+published: false
 
 ---
 
-```{r setup, include=FALSE}
-library(nima)
+IN PROGRESS:
+* https://www.kdnuggets.com/2017/12/managing-machine-learning-workflows-scikit-learn-pipelines-part-1.html
+* https://github.com/jeremyrcoyle/sl3/issues/104
+
+Common in the language of modern data science are words such as "munging,"
+"massaging," "mining" -- all words denoting the interactive process by which the
+analyst extracts some form of deliverable inference from a given data set. These
+terms express, among other things, the (often) convoluted process by which a set
+of pre-processing and estimation procedures are applied to an input data set in
+order to transform said data set into a
+["tidy"](http://vita.had.co.nz/papers/tidy-data.html) output data set from which
+informative visualizations and summaries may be easily extracted. A formalism
+that captures this involved process is that of machine learning _pipelines_. A
+_pipeline_, popularized by the [method of the same
+name](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
+in Python's [scikit-learn library](http://scikit-learn.org/stable/index.html),
+may be thought of as a simple bundle that documents procedures to be applied to
+as input data set in a particular order, ultimately resulting in a tidy output
+data set.
+
+Recently, the pipeline idiom has made its way into the R programming language,
+via the new [`sl3` R package](https://github.com/jeremyrcoyle/sl3). A concrete
+understanding of the utility of pipelines is best developed by example -- so,
+that's precisely what we'll do! In the following, we'll apply the concept of a
+machine learning pipeline to the canonical [iris data set](), combining a series
+of learners (machine learning algorithms for estimation/classification) with
+Principal Components analysis, a simple pre-processing step.
+
+```{r setup_pkgs, message=FALSE}
+library(datasets)
+library(tidyverse)
+library(data.table)
+library(sl3)
+```
+
+...
+
+```{r prepare_data, message=FALSE}
+data(iris)
+iris <- iris %>%
+  as_tibble(.)
+iris
+```
+
+...
+
+```{r make_iris_task}
+iris_task <- sl3_Task$new(
+  data = iris,
+  covariates = colnames(iris)[-5],
+  outcome = colnames(iris)[5],
+  outcome_type = "categorical"
+)
+iris_task
+```
+
+...
+
+```{r}
 ```
 

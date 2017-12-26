@@ -69,7 +69,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params.intro]
   header    = "Almost Surely..."
   paragraph = "musings on statistics and science by Nima Hejazi"
-  about     = "Nima is a Biostatistics PhD student. His interests center around robust causal inference, nonparametric estimation and machine learning, and statistical computing."
+  about     = "Nima is a Biostatistics PhD student. His interests center around robust causal inference, nonparametric estimation and machine learning, statistical computing and data science."
 
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
