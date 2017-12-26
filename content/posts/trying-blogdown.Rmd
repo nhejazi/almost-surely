@@ -3,7 +3,7 @@ date: "2017-05-29"
 author: "Nima Hejazi"
 title: "taking blogdown for a test drive"
 type: "post"
-categories: [ "R", "blog", "tools", "productivity", "computing" ]
+categories: [ "R", "tools", "productivity", "computing" ]
 
 ---
 

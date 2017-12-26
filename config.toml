@@ -21,7 +21,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "Almost Surely..."
   # Sets where "View More Posts" links
-  viewMorePostLink     = "/post/"
+  viewMorePostLink     = "/posts/"
 
 # Optional Params
   # Sets navbarTitle to match the section of the website
@@ -69,7 +69,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params.intro]
   header    = "Almost Surely..."
   paragraph = "musings on statistics and science by Nima Hejazi"
-  about     = "Nima is a Biostatistics PhD student. His interests center around causal inference, nonparametric statistics and machine learning, and statistical computing, with applications in the biomedical sciences."
+  about     = "Nima is a Biostatistics PhD student. His interests center around robust causal inference, nonparametric estimation and machine learning, and statistical computing."
 
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
@@ -90,7 +90,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 # Identifier prepends a Font Awesome icon to the menu item
 [[menu.main]]
     name = "Posts"
-    url = "/post"
+    url = "/posts"
     identifier = "fa fa-newspaper-o"
     weight = 1
 

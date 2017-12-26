@@ -1,0 +1,13 @@
+---
+date: "2017-12-26"
+author: "Nima Hejazi"
+title: "sl3: Machine Learning Pipelines for R"
+type: "post"
+categories: [ "R", "data science", "machine learning", "computing" ]
+
+---
+
+```{r setup, include=FALSE}
+library(nima)
+```
+
