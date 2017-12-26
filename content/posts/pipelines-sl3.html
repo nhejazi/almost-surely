@@ -1,0 +1,63 @@
+---
+date: "2017-12-26"
+author: "Nima Hejazi"
+title: "sl3: Machine Learning Pipelines for R"
+type: "post"
+categories: [ "R", "data science", "machine learning", "computing" ]
+comments: false
+published: false
+
+---
+
+
+
+<p>IN PROGRESS: * <a href="https://www.kdnuggets.com/2017/12/managing-machine-learning-workflows-scikit-learn-pipelines-part-1.html" class="uri">https://www.kdnuggets.com/2017/12/managing-machine-learning-workflows-scikit-learn-pipelines-part-1.html</a> * <a href="https://github.com/jeremyrcoyle/sl3/issues/104" class="uri">https://github.com/jeremyrcoyle/sl3/issues/104</a></p>
+<p>Common in the language of modern data science are words such as “munging,” “massaging,” “mining” – all words denoting the interactive process by which the analyst extracts some form of deliverable inference from a given data set. These terms express, among other things, the (often) convoluted process by which a set of pre-processing and estimation procedures are applied to an input data set in order to transform said data set into a <a href="http://vita.had.co.nz/papers/tidy-data.html">“tidy”</a> output data set from which informative visualizations and summaries may be easily extracted. A formalism that captures this involved process is that of machine learning <em>pipelines</em>. A <em>pipeline</em>, popularized by the <a href="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">method of the same name</a> in Python’s <a href="http://scikit-learn.org/stable/index.html">scikit-learn library</a>, may be thought of as a simple bundle that documents procedures to be applied to as input data set in a particular order, ultimately resulting in a tidy output data set.</p>
+<p>Recently, the pipeline idiom has made its way into the R programming language, via the new <a href="https://github.com/jeremyrcoyle/sl3"><code>sl3</code> R package</a>. A concrete understanding of the utility of pipelines is best developed by example – so, that’s precisely what we’ll do! In the following, we’ll apply the concept of a machine learning pipeline to the canonical <a href="">iris data set</a>, combining a series of learners (machine learning algorithms for estimation/classification) with Principal Components analysis, a simple pre-processing step.</p>
+<pre class="r"><code>library(datasets)
+library(tidyverse)
+library(data.table)
+library(sl3)</code></pre>
+<p>…</p>
+<pre class="r"><code>data(iris)
+iris &lt;- iris %&gt;%
+  as_tibble(.)
+iris</code></pre>
+<pre><code>## # A tibble: 150 x 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;  &lt;fctr&gt;
+##  1          5.1         3.5          1.4         0.2  setosa
+##  2          4.9         3.0          1.4         0.2  setosa
+##  3          4.7         3.2          1.3         0.2  setosa
+##  4          4.6         3.1          1.5         0.2  setosa
+##  5          5.0         3.6          1.4         0.2  setosa
+##  6          5.4         3.9          1.7         0.4  setosa
+##  7          4.6         3.4          1.4         0.3  setosa
+##  8          5.0         3.4          1.5         0.2  setosa
+##  9          4.4         2.9          1.4         0.2  setosa
+## 10          4.9         3.1          1.5         0.1  setosa
+## # ... with 140 more rows</code></pre>
+<p>…</p>
+<pre class="r"><code>iris_task &lt;- sl3_Task$new(
+  data = iris,
+  covariates = colnames(iris)[-5],
+  outcome = colnames(iris)[5],
+  outcome_type = &quot;categorical&quot;
+)
+iris_task</code></pre>
+<pre><code>## A sl3 Task with 150 obs and these nodes:
+## $covariates
+## [1] &quot;Sepal.Length&quot; &quot;Sepal.Width&quot;  &quot;Petal.Length&quot; &quot;Petal.Width&quot; 
+## 
+## $outcome
+## [1] &quot;Species&quot;
+## 
+## $id
+## NULL
+## 
+## $weights
+## NULL
+## 
+## $offset
+## NULL</code></pre>
+<p>…</p>
