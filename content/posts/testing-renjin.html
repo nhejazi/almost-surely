@@ -39,17 +39,13 @@ install.packages(&quot;https://nexus.bedatadriven.com/content/groups/public/org/
 <p>Alright, now we’re ready to compare the performances of the naive and bytecode-compiled implementations:</p>
 <pre class="r"><code>time_norm &lt;- system.time(bigsum(1e7))
 time_comp &lt;- system.time(bigsumc(1e7))</code></pre>
-<p>Notice that directly using R’s native bytecode compiler improves the performance of our <code>bigsum</code> function quite a bit – that is, considering the time the system spends on the computation, we save about 0.01 seconds, (roughly) a factor of 3. Maybe <code>renjin</code> can help us out even more?</p>
+<p>Notice that directly using R’s native bytecode compiler improves the performance of our <code>bigsum</code> function quite a bit – that is, considering the time the system spends on the computation, we save about 0.06 seconds, (roughly) a factor of 1. Maybe <code>renjin</code> can help us out even more?</p>
 <pre class="r"><code>time_renjin &lt;- system.time(renjin(bigsum(1e7)))</code></pre>
-<pre class="r"><code>table &lt;- as.data.frame(rbind(as.numeric(time_norm), as.numeric(time_comp),
-                             as.numeric(time_renjin)))[, c(1, 2, 3)]
-colnames(table) &lt;- c(&quot;user&quot;, &quot;system&quot;, &quot;total&quot;)
-rownames(table) &lt;- c(&quot;naive&quot;, &quot;cmpfun&quot;, &quot;renjin&quot;)
-print(table)</code></pre>
+<pre class="r"><code>print(table)</code></pre>
 <pre><code>##         user system total
-## naive  0.427  0.020 0.452
-## cmpfun 0.440  0.007 0.449
-## renjin 0.523  0.028 0.282</code></pre>
-<p>Wow – just, wow. The gain in computational efficiency here is incredible! Using <code>renjin</code> – even just as a wrapper – improves the time cost (on the system side) by a factor of 1 relative to the naive implementation and by quite a bit still (<strong>a factor of 0</strong>) when compared to the bytecode-compiled version of our function. Damn – I’m at a loss for words. This was just a simple example, but we were able to save so much computational time just by naively calling <code>renjin</code>…and it took just a few extra characters to call it as a wrapper…</p>
-<p>Although Renjin is still in its infancy, I can’t help but be excited for the future of R – and statistical computing in general – with how well its already performing. We’re going to be able to (try to) do great things with these new tools 🌟</p>
+## naive  0.439  0.018 0.481
+## cmpfun 0.417  0.005 0.423
+## renjin 0.458  0.017 0.208</code></pre>
+<p>Wow – just, wow. The gain in computational efficiency here is incredible! Using <code>renjin</code> – even just as a wrapper – improves the time cost (on the system side) by a factor of 1 relative to the naive implementation and by quite a bit still (<strong>a factor of 2</strong>) when compared to the bytecode-compiled version of our function. This was just a simple example, but we were able to save so much computational time just by naively calling <code>renjin</code>…and it took just a few extra characters to call it as a wrapper…</p>
+<p>Although Renjin is still in its infancy, I can’t help but be excited for the future of R – and statistical computing in general – with how well its already performing. We’re going to be able to (try to) do great things with these new tools ❇️</p>
 </section>

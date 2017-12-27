@@ -1,6 +1,7 @@
 +++
 date = "2016-02-01"
-title = "Almost Surely: musings on statistics and science"
+title = "Almost Surely: stochastic musings on statistics and modern science"
+
 +++
 
 This blog is dedicated to exploring statistics, science, and their myriad
@@ -14,8 +15,7 @@ all cases, the goal of a post will be to explore the topic at hand with an eye
 towards examining its relationship with statistics, science and policy.
 
 _At no time and under no circumstances are the ideas expressed here necessarily
-endorsed by any organization with which I may be affiliated, whether an
-employer, funding agency, or whatever else._
+endorsed by any organization with which I may be affiliated._
 
 _Trivialities_: Though it emerged rather whimsically, the name of this blog
 merits some explanation -- specifically, the term "almost surely", from the

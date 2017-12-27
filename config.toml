@@ -38,6 +38,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "Posts"
     weight = 3
 
+[[menu.main]]
+    url = "https://stat.berkeley.edu/~nhejazi/"
+    name = "Academia"
+    weight = 4
+
+[[menu.main]]
+    url = "https://nimahejazi.org"
+    name = "Personal"
+    weight = 5
+
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
 # The list of available icons can be found at http://fontawesome.io/icons/

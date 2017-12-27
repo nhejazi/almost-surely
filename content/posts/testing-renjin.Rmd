@@ -80,19 +80,22 @@ time_comp <- system.time(bigsumc(1e7))
 Notice that directly using R's native bytecode compiler improves the performance
 of our `bigsum` function quite a bit -- that is, considering the time the system
 spends on the computation, we save about
-`r round(abs(time_norm[2] - time_comp[2]), 2)` seconds, (roughly) a factor of
-`r round(time_norm[2] / time_comp[2], 0)`. Maybe `renjin` can help us out even
+`r round(abs(time_norm[3] - time_comp[3]), 2)` seconds, (roughly) a factor of
+`r round(time_norm[3] / time_comp[3], 0)`. Maybe `renjin` can help us out even
 more?
 
 ```{r renjin}
 time_renjin <- system.time(renjin(bigsum(1e7)))
 ```
 
-```{r table}
+```{r table-make, echo=FALSE}
 table <- as.data.frame(rbind(as.numeric(time_norm), as.numeric(time_comp),
                              as.numeric(time_renjin)))[, c(1, 2, 3)]
 colnames(table) <- c("user", "system", "total")
 rownames(table) <- c("naive", "cmpfun", "renjin")
+```
+
+```{r table-print}
 print(table)
 ```
 
@@ -100,11 +103,10 @@ Wow -- just, wow. The gain in computational efficiency here is incredible! Using
 `renjin` -- even just as a wrapper -- improves the time cost (on the system
 side) by a factor of `r round(table[1, 2] / table[3, 2], 0)` relative to the
 naive implementation and by quite a bit still (__a factor of
-`r round(table[2, 2] / table[3, 2], 0)`__) when compared to the
-bytecode-compiled version of our function. Damn -- I'm at a loss for words. This
-was just a simple example, but we were able to save so much computational time
-just by naively calling `renjin`...and it took just a few extra characters to
-call it as a wrapper...
+`r round(table[2, 3] / table[3, 3], 0)`__) when compared to the
+bytecode-compiled version of our function. This was just a simple example, but
+we were able to save so much computational time just by naively calling
+`renjin`...and it took just a few extra characters to call it as a wrapper...
 
 Although Renjin is still in its infancy, I can't help but be excited for the
 future of R -- and statistical computing in general -- with how well its already

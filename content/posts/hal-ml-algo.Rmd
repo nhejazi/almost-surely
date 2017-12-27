@@ -1,18 +1,18 @@
-+++
-author = "Nima Hejazi"
-categories = [ "statistics", "machine learning", "computing" ]
-date = "2017-07-05"
-description = "Discussion of HAL's statistical properties, and speeding it up"
-featured = ""
-featuredalt = ""
-featuredpath = ""
-linktitle = ""
-title = "The Highly Adaptive LASSO estimator"
-type = "post"
-comments = true
-published = true
+---
+author: "Nima Hejazi"
+categories: [ "statistics", "machine learning", "computing" ]
+date: "2018-07-05"
+description: "Discussion of the statistical/computational properties of HAL"
+featured: ""
+featuredalt: ""
+featuredpath: ""
+linktitle: ""
+title: "The Highly Adaptive LASSO estimator"
+type: "post"
+comments: true
+published: false
 
-+++
+---
 
 ## The Highly Adaptive LASSO (HAL)
 
