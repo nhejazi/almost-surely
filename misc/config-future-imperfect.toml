@@ -1,0 +1,172 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "Almost Surely..."
+theme = "hugo-future-imperfect"
+preserveTaxonomyNames = true
+paginate = 3
+disqusShortname = "nhejazi"
+googleAnalytics = "UA-67244126-3"
+pluralizeListTitles = false
+
+# custom additions
+enableEmoji = true
+MathJaxCDN = "https://cdn.bootcss.com"
+MathJaxVersion = "2.7.1"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[params]
+  author               = "Nima Hejazi"
+  # Sets the meta tag description
+  description          = "Nima's musings on statistics and modern science"
+  # Sets the navbarTitle that appears in the top left of the navigation bar
+  navbarTitle          = "Almost Surely..."
+  # Sets where "View More Posts" links
+  viewMorePostLink     = "/posts/"
+
+# Optional Params
+  # Sets navbarTitle to match the section of the website
+  dynamicTitles        = true
+  # Sets RSS icons to appear on the sidebar with the social media buttons
+  rssAppearAtTop       = true
+  rssAppearAtBottom    = true
+  # Sets Social Media icons to appear on the sidebar
+  socialAppearAtTop    = true
+  socialAppearAtBottom = true
+  # Sets Categories to sort by number of posts instead of alphabetical
+  categoriesByCount    = true
+  # Sets Estimated Reading Time to appear in post headers
+  includeReadingTime   = true
+
+  # Sets the Favicon and Version for the site. Default support is for
+  # apple-touch-icon-precomposed.png, favicon.png, favicon.ico, and mstile.png.
+  # These are stored in the favicon folder. See the following for more
+  # information: https://github.com/audreyr/favicon-cheat-sheet
+  loadFavicon          = true
+  faviconVersion       = ""
+  # Sets Social Share links to appear on posts
+  socialShare          = true
+  # Load custom CSS or JavaScript files. The variable is an array so that you
+  # can load multiple files if necessary. You can also load the standard theme
+  # files by adding the value, "default".
+  # customCSS            = ["default", "/path/to/file"]
+  # customJS             = ["default", "/path/to/file"]
+  customCSS            = ["default"]
+  customJS             = ["default"]
+
+  # Disqus takes priority over Staticman (github.com/eduardoboucas/staticman)
+  # due to ease of use. Feel free to check out both and decide what you would
+  # prefer to use. See Staticman.yml for additional settings.
+[params.staticman]
+  # Sets Statiman to be active
+  staticman = false
+  # Sets the location for Staticman to connect to
+  username  = ""
+  repo      = ""
+  branch    = ""
+
+  # Optional params related to the sidebar. They are recommended, but not
+  # required for proper functionality. HTML is supported within the params.
+[params.intro]
+  header    = "Almost Surely..."
+  paragraph = "musings on statistics and science by Nima Hejazi"
+  about     = "Nima is a Biostatistics PhD student. His interests center around robust causal inference, nonparametric estimation and machine learning, statistical computing and data science."
+
+  # This appears at the top of the sidebar above params.intro.header.
+  # A width of less than 100px is recommended from a design perspective.
+  [params.intro.pic]
+    src       = "/img/main/avatar.jpg"
+    # Sets Image to be a cirlce
+    circle    = false
+    # Sets Image to be Future Imperfect's hexagon
+    imperfect = true
+    width     = ""
+    alt       = ""
+
+[params.postAmount]
+# Sets number of recent posts to show in the sidebar. The default value is 5.
+  sidebar = 7
+
+# Set up your menu items in the navigation bar
+# Identifier prepends a Font Awesome icon to the menu item
+[[menu.main]]
+    name = "Posts"
+    url = "/posts"
+    identifier = "fa fa-newspaper-o"
+    weight = 1
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories"
+    identifier = "fa fa-list"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    identifier = "fa fa-info"
+    weight = 3
+
+[[menu.main]]
+    name = "Academic"
+    url = "https://www.stat.berkeley.edu/~nhejazi"
+    identifier = "fa fa-graduation-cap"
+    weight = 4
+
+[[menu.main]]
+    name = "CV"
+    url = "https://www.stat.berkeley.edu/~nhejazi/hejazi-cv.pdf"
+    identifier = "fa fa-user"
+    weight = 5
+
+[[menu.main]]
+    name = "Main"
+    url = "https://www.nimahejazi.org"
+    identifier = "fa fa-reply"
+    weight = 6
+
+# Sets Social Media icons to appear and link to your accounts.
+# Value should be your username unless otherwise noted. These are the icons
+# affected by socialAppearAtTop and socialAppearAtBottom.
+[social]
+  # Coding Communities
+  github          = "nhejazi"
+  gitlab          = "nhejazi"
+  stackoverflow   = "6026746" # User Number
+  bitbucket       = "nhejazi"
+  jsfiddle        = ""
+  codepen         = ""
+  # Visual Art Communities
+  deviantart      = ""
+  flickr          = ""
+  behance         = ""
+  dribbble        = ""
+  # Publishing Communities
+  wordpress       = ""
+  medium          = "nshejazi"
+  # Professional/Business Oriented Communities
+  linkedin        = "nshejazi"
+  foursquare      = ""
+  xing            = ""
+  slideshare      = "NimaHejazi1"
+  # Social Networks
+  facebook        = "nima.hejazi"
+  googleplus      = ""
+  reddit          = "nshejazi"
+  quora           = "Nima-Hejazi-2"
+  youtube         = ""
+  vimeo           = ""
+  whatsapp        = "" # WhatsApp Number
+  # WeChat and QQ need testing.
+  wechat          = ""
+  qq              = "" # User ID Number
+  instagram       = "nshejazi"
+  tumblr          = ""
+  twitter         = "nshejazi"
+  skype           = "live:nima.hejazi7"
+  snapchat        = ""
+  pinterest       = ""
+  telegram        = ""
+  vine            = ""
+  # Email
+  email           = "nh@nimahejazi.org"
+

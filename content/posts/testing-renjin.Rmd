@@ -110,3 +110,4 @@ Although Renjin is still in its infancy, I can't help but be excited for the
 future of R -- and statistical computing in general -- with how well its already
 performing. We're going to be able to (try to) do great things with these new
 tools `r emo::ji("awesome")`
+
