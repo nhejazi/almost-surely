@@ -1,9 +1,14 @@
 +++
-date = "2017-06-29"
 author = "Nima Hejazi"
-title = "reflections on reproducibility"
-summary = ""
 categories = [ "reproducibility", "open science", "peer review" ]
+date = "2017-06-29"
+description = ""
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "Reflections on reproducibility"
+type = "post"
 comments = false
 published = false
 

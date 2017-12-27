@@ -1,10 +1,16 @@
 +++
-date = "2016-05-25"
 author = "Nima Hejazi"
-title = "how to love a tool - atom"
-summary = "Discussion of the new Atom text editor"
-categories = [ "tools", "productivity", "computing", "text editors" ]
+categories = [ "tools", "productivity", "computing" ]
+date = "2016-05-25"
+description = "Discussion of GitHub's new Atom text editor"
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "How to love a tool - Atom"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -51,4 +57,3 @@ Having pointed out all of this cool stuff about Atom, I should probably admit
 that this whole post was written comfortably via Neovim. Oh well, at least I
 didn't recommend Atom for everything I guess...
 
-**_last updated: 06 June 2016_**

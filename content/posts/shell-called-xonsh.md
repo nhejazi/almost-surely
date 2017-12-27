@@ -1,10 +1,16 @@
 +++
-date = "2016-06-25"
 author = "Nima Hejazi"
-title = "a shell called xonsh"
-summary = "Discussion of the new Python-based Xonsh shell"
 categories = [ "tools", "productivity", "computing" ]
+date = "2016-06-25"
+description = "Discussion of the new Python-based Xonsh shell"
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "A shell called xonsh"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -57,4 +63,3 @@ Now that I've finished with my goal of promoting/praising xonsh and gitsome as
 best as I know how, it's probably best to wrap this post up. Until my next
 post -- _cheers_.
 
-**_last updated: 25 June 2016_**

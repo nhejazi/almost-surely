@@ -1,10 +1,16 @@
 +++
-date = "2016-05-12"
 author = "Nima Hejazi"
-title = "how to love a tool - gitsome"
-summary = "Discussion of the Gitsome CLI, based on the Xonsh shell"
 categories = [ "tools", "productivity", "computing" ]
+date = "2016-05-12"
+description = "Discussion of the Gitsome CLI, based on the Xonsh shell"
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "How to love a tool - gitsome"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -59,4 +65,3 @@ should look like. There are still a few more tools I want to write about, namely
 the [Atom editor](https://atom.io/) and the [Xonsh shell](http://xon.sh/)
 mentioned earlier -- so, until next time, cheers.
 
-**_last updated: 12 May 2016_**

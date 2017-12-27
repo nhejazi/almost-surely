@@ -1,10 +1,16 @@
 +++
-date = "2016-05-02"
 author = "Nima Hejazi"
-title = "R graphics - ggplot versus base"
-summary = ""
 categories = [ "R", "graphics", "not so standard deviations", "data science" ]
+date = "2016-05-02"
+description = ""
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "R graphics - ggplot versus base"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -92,4 +98,3 @@ Anyway, cheers for now – I think I mostly covered everything I had hoped to ta
 about from Jeff Leek's post, but, really, who knows, there might be a follow-up
 post at some point...
 
-**_last updated: 04 May 2016_**

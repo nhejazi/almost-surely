@@ -1,9 +1,16 @@
 ---
-date: "2017-06-29"
 author: "Nima Hejazi"
-title: "renjin: put some Java in your R"
-type: "post"
 categories: [ "R", "tools", "productivity", "computing" ]
+date: "2017-06-29"
+description: ""
+featured: ""
+featuredalt: ""
+featuredpath: ""
+linktitle: ""
+title: "Renjin: put some Java in your R"
+type: "post"
+comments: true
+published: true
 
 ---
 

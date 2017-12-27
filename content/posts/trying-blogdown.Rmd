@@ -1,9 +1,16 @@
 ---
-date: "2017-05-29"
 author: "Nima Hejazi"
-title: "taking blogdown for a test drive"
-type: "post"
 categories: [ "R", "tools", "productivity", "computing" ]
+date: "2017-05-29"
+description: ""
+featured: ""
+featuredalt: ""
+featuredpath: ""
+linktitle: ""
+title: "Taking blogdown for a test drive"
+type: "post"
+comments: true
+published: true
 
 ---
 
@@ -24,7 +31,6 @@ going to take `blogdown` for a spin.
 
 First, let's generate some data and try doing some very simple summary
 statistics:
-
 
 ```{r data_simulation}
 # we're going to be simulating...set seed and constants
@@ -84,3 +90,4 @@ easily. In my old blog, I had to come up with a custom R script to use `knitr`
 to process [R Markdown](http://rmarkdown.rstudio.com/) to standard markdown,
 allowing them to be rendered on my old [Jekyll](https://jekyllrb.com/) blog.
 Glad I never have to do that again `r emo::ji("awesome")`
+

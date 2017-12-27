@@ -1,10 +1,16 @@
 +++
-date = "2016-05-06"
 author = "Nima Hejazi"
-title = "how to love a tool - neovim"
-summary = "Discussion of the Neovim text editor"
-categories = [ "tools", "productivity", "computing", "text editors" ]
+categories = [ "tools", "productivity", "computing" ]
+date = "2016-05-06"
+description = "Discussion of the new minimal text editor, Neovim"
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "How to love a tool - Neovim"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -88,4 +94,3 @@ is basically just two scripts!
 Maybe I'll make a series of posts about the tools I've been switching over to,
 but, for now, I think that's basically all I wanted to say here, so, cheers.
 
-**_last updated: 07 May 2016_**

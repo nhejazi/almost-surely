@@ -1,10 +1,16 @@
 +++
-date = "2016-04-21"
 author = "Nima Hejazi"
-title = "quantified self with Fitbit, part 1"
-summary = "Early exploration of analyzing Fitbit data"
 categories = [ "fitbit", "biometrics", "quantified self", "data science" ]
+date = "2016-04-21"
+description = "Early exploration of analyzing Fitbit data"
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "quantified self with Fitbit, part 1"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -72,3 +78,4 @@ by other ongoing work/projects...
 Anyway, to any readers (I guess myself in the future at least?), cheers for now
 -- I don't think I discussed nearly everything that I set out to talk about, but
 hopefully there will be a follow-up post soon enough.
+

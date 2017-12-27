@@ -1,11 +1,16 @@
 +++
-date = "2017-07-05"
 author = "Nima Hejazi"
-title = "the highly adaptive LASSO estimator"
-summary = "Discussion of HAL's statistical properties, and speeding it up"
 categories = [ "statistics", "machine learning", "computing" ]
-comments = false
-draft = true
+date = "2017-07-05"
+description = "Discussion of HAL's statistical properties, and speeding it up"
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "The Highly Adaptive LASSO estimator"
+type = "post"
+comments = true
+published = true
 
 +++
 

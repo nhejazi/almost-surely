@@ -1,10 +1,16 @@
 +++
-date = "2016-03-22"
 author = "Nima Hejazi"
-title = "snooping through my SNPs, part 1"
-summary = "Exploratory analysis of my SNP profile"
 categories = [ "genomics", "23andMe", "R", "quantified self" ]
+date = "2016-03-22"
+description = "Exploratory analysis of my SNP profile"
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "Snooping through my SNPs, part 1"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -83,3 +89,4 @@ Buffalo](http://www.vincebuffalo.com/blog/2012/03/12/using-bioconductor-to-analy
 
 The scripts that I built are quite easily adaptable (feel free to use them), and
 [available on GitHub here](https://github.com/nhejazi/23-and-i).
+
