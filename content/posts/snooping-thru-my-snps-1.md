@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "genomics", "23andMe", "R", "quantified self" ]
+tags = [ "genomics", "23andMe", "R", "quantified self" ]
 date = "2016-03-22"
 description = "Exploratory analysis of my SNP profile"
 featured = ""

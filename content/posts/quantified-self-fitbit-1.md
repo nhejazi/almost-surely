@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "fitbit", "biometrics", "quantified self", "data science" ]
+tags = [ "fitbit", "biometrics", "quantified self", "data science" ]
 date = "2016-04-21"
 description = "Early exploration of analyzing Fitbit data"
 featured = ""

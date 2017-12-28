@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "tools", "productivity", "computing" ]
+tags = [ "tools", "productivity", "computing" ]
 date = "2016-05-25"
 description = "Discussion of GitHub's new Atom text editor"
 featured = ""

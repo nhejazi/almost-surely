@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "reproducibility", "open science", "peer review" ]
+tags = [ "reproducibility", "open science", "peer review" ]
 date = "2017-06-29"
 description = ""
 featured = ""

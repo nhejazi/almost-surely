@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
-categories = [ "R", "graphics", "not so standard deviations", "data science" ]
+categories = [ "r", "graphics", "not so standard deviations", "data science" ]
+tags = [ "statistics", "graduate school", "productivity" ]
 date = "2016-05-02"
 description = ""
 featured = ""

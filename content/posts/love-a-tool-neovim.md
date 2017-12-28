@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "tools", "productivity", "computing" ]
+tags = [ "tools", "productivity", "computing" ]
 date = "2016-05-06"
 description = "Discussion of the new minimal text editor, Neovim"
 featured = ""

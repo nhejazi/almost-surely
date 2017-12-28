@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "not so standard deviations", "data science" ]
+tags = [ "not so standard deviations", "data science" ]
 date = "2016-02-24"
 description = ""
 featured = ""

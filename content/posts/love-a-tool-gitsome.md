@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "tools", "productivity", "computing" ]
+tags = [ "tools", "productivity", "computing" ]
 date = "2016-05-12"
 description = "Discussion of the Gitsome CLI, based on the Xonsh shell"
 featured = ""

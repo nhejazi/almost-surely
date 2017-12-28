@@ -1,6 +1,7 @@
 +++
 author = "Nima Hejazi"
 categories = [ "statistics", "graduate school", "productivity" ]
+tags = [ "statistics", "graduate school", "productivity" ]
 date = "2017-12-29"
 description = "Review of productivity and graduate school life in 2017"
 featured = ""

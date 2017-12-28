@@ -1,6 +1,7 @@
 +++
-date = "2016-02-01"
-title = "Almost Surely: stochastic musings on statistics and modern science"
+title = "Almost Surely"
+description = "stochastic musings on statistics and modern science"
+type = "static"
 
 +++
 
