@@ -1,7 +1,9 @@
 +++
 title = "Almost Surely"
-description = "stochastic musings on statistics and modern science"
+description = "Stochastic Musings on Statistics and Modern Science"
 type = "static"
+comments = true
+published = true
 
 +++
 

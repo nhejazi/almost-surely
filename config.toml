@@ -15,7 +15,7 @@ MathJaxVersion = "2.7.1"
 
 [params]
   author = "Nima Hejazi"
-  description = "Stochastic musings on statistics and modern science"
+  description = "Stochastic Musings on Statistics and Modern Science"
   copyright = "© 2017. [Nima Hejazi](https://nimahejazi.org). [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
   githubUsername = "nhejazi"
   #gitlabUsername = "nhejazi"
@@ -66,13 +66,13 @@ MathJaxVersion = "2.7.1"
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "https://github.com/nhejazi/"
-    name = "github"
+    url = "https://twitter.com/nshejazi/"
+    name = "twitter"
     weight = 1
 
 [[menu.icon]]
-    url = "https://twitter.com/nshejazi/"
-    name = "twitter"
+    url = "https://github.com/nhejazi/"
+    name = "github"
     weight = 2
 
 [[menu.icon]]
@@ -91,18 +91,18 @@ MathJaxVersion = "2.7.1"
     weight = 5
 
 [[menu.icon]]
-    url = "https://stackoverflow.com/users/6026746/nhejazi?tab=profile"
-    name = "stack-overflow"
-    weight = 6
-
-[[menu.icon]]
     url = "https://www.reddit.com/user/nshejazi/"
     name = "reddit-alien"
-    weight = 7
+    weight = 6
 
 [[menu.icon]]
     url = "https://www.linkedin.com/in/nshejazi/"
     name = "linkedin"
+    weight = 7
+
+[[menu.icon]]
+    url = "https://stackoverflow.com/users/6026746/nhejazi?tab=profile"
+    name = "stack-overflow"
     weight = 8
 
 [[menu.icon]]
