@@ -81,37 +81,47 @@ MathJaxVersion = "2.7.1"
     weight = 3
 
 [[menu.icon]]
+    url = "https://open.spotify.com/user/nhejazi"
+    name = "spotify"
+    weight = 4
+
+#[[menu.icon]]
+    #url = "https://open.spotify.com/user/nhejazi"
+    #name = "last-fm"
+    #weight = 4
+
+[[menu.icon]]
     url = "https://medium.com/@nshejazi/"
     name = "medium"
-    weight = 4
+    weight = 5
 
 [[menu.icon]]
     url = "https://www.quora.com/profile/Nima-Hejazi-2/"
     name = "quora"
-    weight = 5
+    weight = 6
 
 [[menu.icon]]
     url = "https://www.reddit.com/user/nshejazi/"
     name = "reddit-alien"
-    weight = 6
+    weight = 7
 
 [[menu.icon]]
     url = "https://www.linkedin.com/in/nshejazi/"
     name = "linkedin"
-    weight = 7
+    weight = 8
 
 [[menu.icon]]
     url = "https://stackoverflow.com/users/6026746/nhejazi?tab=profile"
     name = "stack-overflow"
-    weight = 8
+    weight = 9
 
 [[menu.icon]]
     url = "mailto:nh@nimahejazi.org"
     name = "envelope-o"
-    weight = 9
+    weight = 10
 
 [[menu.icon]]
     url = "/index.xml"
     name = "rss"
-    weight = 10
+    weight = 11
 
