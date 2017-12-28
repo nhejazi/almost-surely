@@ -11,7 +11,7 @@ linktitle: ""
 title: "Taking blogdown for a test drive"
 type: "post"
 #comments: true
-disableComments = false
+disableComments: false
 published: true
 output:
   blogdown::html_page:
