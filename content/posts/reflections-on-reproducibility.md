@@ -2,7 +2,7 @@
 author = "Nima Hejazi"
 categories = [ "reproducibility", "open science", "peer review" ]
 tags = [ "reproducibility", "open science", "peer review" ]
-date = "2017-06-29"
+date = "2018-01-12"
 description = ""
 featured = ""
 featuredalt = ""
@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "Reflections on reproducibility"
 type = "post"
-comments = false
+#comments = false
+disableComments = true
 published = false
 
 +++

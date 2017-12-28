@@ -1,7 +1,7 @@
 +++
 author = "Nima Hejazi"
-categories = [ "r", "graphics", "not so standard deviations", "data science" ]
-tags = [ "r", "graphics", "data science", "not so standard deviations" ]
+categories = [ "R", "graphics", "not so standard deviations", "data science" ]
+tags = [ "R", "graphics", "data science", "not so standard deviations" ]
 date = "2016-05-02"
 description = "My $0.02 on a popular debate about plotting packages for R"
 featured = ""
@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "R graphics - ggplot vs base"
 type = "post"
-comments = true
+#comments = true
+disableComments = false
 published = true
 
 +++

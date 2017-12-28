@@ -2,14 +2,15 @@
 title = "Almost Surely..."
 description = "Stochastic Musings on Statistics and Modern Science"
 type = "static"
-comments = false
+#comments = false
+disableComments = true
 published = true
 
 +++
 
 This blog is dedicated to exploring statistics, science, and their myriad
 interactions in our modern world, as construed by [Nima
-Hejazi](http://nimahejazi.org). The scope is necessarily broad -- hopefully,
+Hejazi](https://nimahejazi.org). The scope is necessarily broad -- hopefully,
 ideas from nonparametric statistics, semiparametric theory, high-dimensional
 probability, machine learning, causal inference, information theory,
 optimization, statistical computing, data science, applied statistics, and

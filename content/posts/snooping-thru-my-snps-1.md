@@ -1,7 +1,7 @@
 +++
 author = "Nima Hejazi"
-categories = [ "genomics", "23andMe", "R", "quantified self" ]
-tags = [ "genomics", "23andMe", "R", "quantified self" ]
+categories = [ "genomics", "biometrics", "23andMe", "R", "quantified self" ]
+tags = [ "genomics", "biometrics", "23andMe", "R", "quantified self" ]
 date = "2016-03-22"
 description = "Exploratory data analysis of my SNP profile from 23andMe"
 featured = ""
@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "Snooping through my SNPs, part 1"
 type = "post"
-comments = true
+#comments = true
+disableComments = false
 published = true
 
 +++

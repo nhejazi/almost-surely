@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "A shell called xonsh"
 type = "post"
-comments = true
+#comments = true
+disableComments = false
 published = true
 
 +++
@@ -59,8 +60,4 @@ On most machines, installing xonsh and gitsome is as easy as:
 pip3 install xonsh
 pip3 install gitsome
 ```
-
-Now that I've finished with my goal of promoting/praising xonsh and gitsome as
-best as I know how, it's probably best to wrap this post up. Until my next
-post -- _cheers_.
 

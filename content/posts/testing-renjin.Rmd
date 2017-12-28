@@ -3,18 +3,19 @@ author: "Nima Hejazi"
 categories: [ "R", "data science", "statistics", "computing" ]
 tags: [ "R", "data science", "statistics", "computing" ]
 date: "2017-06-29"
-description: "Quick look at using R with Java 'under the hood'"
+description: "Quick look at using R with some Java 'under the hood'"
 featured: ""
 featuredalt: ""
 featuredpath: ""
 linktitle: ""
 title: "Renjin: put some Java in your R"
 type: "post"
-comments: true
+#comments: true
+disableComments: false
 published: true
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
 
 ---
 

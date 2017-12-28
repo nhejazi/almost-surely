@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "How to love a tool - gitsome"
 type = "post"
-comments = true
+#comments = true
+disableComments = false
 published = true
 
 +++

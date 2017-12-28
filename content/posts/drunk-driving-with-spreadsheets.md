@@ -1,7 +1,7 @@
 +++
 author = "Nima Hejazi"
-categories = [ "not so standard deviations", "data science" ]
-tags = [ "not so standard deviations", "data science" ]
+categories = [ "not so standard deviations", "data science", "statistics"]
+tags = [ "not so standard deviations", "data science", "statistics" ]
 date = "2016-02-24"
 description = "Discussion of a new anti-spreadsheet aphorism for data science"
 featured = ""
@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "Drunk driving with spreadsheets"
 type = "post"
-comments = true
+#comments = true
+disableComments = false
 published = true
 
 +++

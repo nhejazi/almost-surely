@@ -10,11 +10,12 @@ featuredpath: ""
 linktitle: ""
 title: "The Highly Adaptive LASSO estimator"
 type: "post"
-comments: true
+#comments: true
+disableComments: false
 published: false
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
 
 ---
 

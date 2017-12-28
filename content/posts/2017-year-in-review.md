@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "2017 - year in review"
 type = "post"
-comments = false
+#comments = false
+disableComments = true
 published = false
 
 +++

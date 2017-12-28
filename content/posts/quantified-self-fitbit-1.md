@@ -10,7 +10,8 @@ featuredpath = ""
 linktitle = ""
 title = "Quantified self with Fitbit, part 1"
 type = "post"
-comments = true
+#comments = true
+disableComments = false
 published = true
 
 +++
