@@ -1,9 +1,9 @@
 ---
 author: "Nima Hejazi"
-categories: [ "R", "tools", "productivity", "computing" ]
-tags: [ "R", "tools", "productivity", "computing" ]
+categories: [ "R", "data science", "tools", "productivity" ]
+tags: [ "R", "data science", "tools", "productivity" ]
 date: "2017-05-29"
-description: ""
+description: "Trying out RStudio's new blogging framework"
 featured: ""
 featuredalt: ""
 featuredpath: ""

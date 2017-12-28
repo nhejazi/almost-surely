@@ -1,9 +1,9 @@
 ---
 author: "Nima Hejazi"
-categories: [ "R", "tools", "productivity", "computing" ]
-tags: [ "R", "tools", "productivity", "computing" ]
+categories: [ "R", "data science", "statistics", "computing" ]
+tags: [ "R", "data science", "statistics", "computing" ]
 date: "2017-06-29"
-description: ""
+description: "Quick look at using R with Java 'under the hood'"
 featured: ""
 featuredalt: ""
 featuredpath: ""

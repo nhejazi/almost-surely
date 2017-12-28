@@ -1,9 +1,9 @@
 +++
 author = "Nima Hejazi"
 categories = [ "r", "graphics", "not so standard deviations", "data science" ]
-tags = [ "statistics", "graduate school", "productivity" ]
+tags = [ "r", "graphics", "data science", "not so standard deviations" ]
 date = "2016-05-02"
-description = ""
+description = "My $0.02 on a popular debate about plotting packages for R"
 featured = ""
 featuredalt = ""
 featuredpath = ""
