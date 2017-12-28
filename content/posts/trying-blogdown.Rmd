@@ -1,6 +1,7 @@
 ---
 author: "Nima Hejazi"
 categories: [ "R", "tools", "productivity", "computing" ]
+tags: [ "R", "tools", "productivity", "computing" ]
 date: "2017-05-29"
 description: ""
 featured: ""
@@ -11,6 +12,9 @@ title: "Taking blogdown for a test drive"
 type: "post"
 comments: true
 published: true
+output:
+  blogdown::html_page:
+    toc: true
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 author: "Nima Hejazi"
 categories: [ "statistics", "machine learning", "computing" ]
+tags: ["statistics", "machine learning", "computing" ]
 date: "2018-07-05"
 description: "Discussion of the statistical/computational properties of HAL"
 featured: ""
@@ -11,6 +12,9 @@ title: "The Highly Adaptive LASSO estimator"
 type: "post"
 comments: true
 published: false
+output:
+  blogdown::html_page:
+    toc: true
 
 ---
 

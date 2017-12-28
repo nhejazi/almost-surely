@@ -1,10 +1,16 @@
 +++
-date = "2016-02-24"
 author = "Nima Hejazi"
-title = "drunk driving with spreadsheets"
-summary = ""
 categories = [ "not so standard deviations", "data science" ]
+date = "2016-02-24"
+description = ""
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "Drunk driving with spreadsheets"
+type = "post"
 comments = true
+published = true
 
 +++
 
@@ -40,6 +46,4 @@ an age of computationally reproducible research, the use of spreadsheets is
 indeed quite irresponsible when the goal of data science is the extraction of
 insight from information -- that is, the use of spreadsheets may often lead the 
 vulnerable data scientist off of the road to valid insights.
-
-**_last updated: 22 March 2016_**
 

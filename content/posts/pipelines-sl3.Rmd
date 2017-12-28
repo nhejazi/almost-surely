@@ -1,6 +1,7 @@
 ---
 author: "Nima Hejazi"
 categories: [ "R", "data science", "machine learning", "computing" ]
+tags: [ "R", "data science", "machine learning", "computing" ]
 date: "2017-12-26"
 description: ""
 featured: ""
@@ -11,6 +12,9 @@ title: "sl3: Machine Learning Pipelines for R"
 type: "post"
 comments: false
 published: false
+output:
+  blogdown::html_page:
+    toc: true
 
 ---
 
