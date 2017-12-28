@@ -63,7 +63,5 @@ page](https://github.com/donnemartin/gitsome)!
 
 Anyway, I think that pretty much concludes what I had to say about gitsome -- in
 short, an awesome tool that really encapsulates what a modern shell environment
-should look like. There are still a few more tools I want to write about, namely
-the [Atom editor](https://atom.io/) and the [Xonsh shell](http://xon.sh/)
-mentioned earlier -- so, until next time, cheers.
+should look like.
 

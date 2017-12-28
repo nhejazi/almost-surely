@@ -35,7 +35,7 @@ high degree of reliability to trends discovered from this data.
 In the exploratory analysis that I performed on my own SNP data, I produced two
 visualizations of my genome (as well as a reference visualization based on
 public data) -- all of these were aimed at performing a first-pass exploratory
-examination of the data...perhaps I'll have a chance to perform a more thorough 
+examination of the data...perhaps I'll have a chance to perform a more thorough
 analysis soon (hopefully, no more than a few months time).
 
 To start, I merely read in the text file, organized the SNPs by chromosome, and
@@ -43,7 +43,8 @@ To start, I merely read in the text file, organized the SNPs by chromosome, and
 chromosomes (plus those occurring in mitochondrial DNA):
 
 <img src="../../img/main/snp_distribution.jpg"
-alt="Distribution of single nucleotide polymorphisms across the genome" width="700" height="700">
+alt="Distribution of single nucleotide polymorphisms across the genome"
+width="700" height="700">
 
 The plot above is actually rather uninformative. As it turns out, the number of
 SNPs is mostly a function of the length (base pairs) of a chromosome, so
@@ -69,10 +70,11 @@ GWAS data available). The plot generated from examining these regions is
 displayed below:
 
 <img src="../../img/main/risk_karyotype.jpg"
-alt="a rough karyotype comparing my alleles to GWAS data"  width="700" height="700">
+alt="a rough karyotype comparing my alleles to GWAS data"  width="700"
+height="700">
 
 Across all alleles available in public GWAS data, those alleles found in my data
-set are marked on each chromosomes, with those alleles associated with a higher 
+set are marked on each chromosomes, with those alleles associated with a higher
 risk of a given disorder marked in _light blue_ (and those alleles not
 associated with a significant risk marked in _light red_).
 
@@ -81,14 +83,15 @@ number of avenues exist for going further (a few of which I hope to later
 examine and write about). My very quick analysis also led me to realize that
 despite the large number of personal genomics services, tools for analyzing this
 data personally appear limited, though a working knowledge of R seems to solve
-this problem...and I imagine much of the same may be accomplished using similar 
-bioinformatics tools (Python's _Biopython_ and Julia's _BioJulia_ projects both 
+this problem...and I imagine much of the same may be accomplished using similar
+bioinformatics tools (Python's _Biopython_ and Julia's _BioJulia_ projects both
 come to mind).
 
-Much of the analysis described above was better documented in a helpful [blog
-post by Vince
+_Credit where it's due:_ Much of the analysis workflow described above was
+better documented in a helpful [blog post by Vince
 Buffalo](http://www.vincebuffalo.com/blog/2012/03/12/using-bioconductor-to-analyze-your-23andme-data.html).
 
-The scripts that I built are quite easily adaptable (feel free to use them), and
-[available on GitHub here](https://github.com/nhejazi/23-and-i).
+The scripts I built are quite easily adaptable (feel free to use them and
+improve them) -- they're all [available on GitHub
+here](https://github.com/nhejazi/23-and-i).
 

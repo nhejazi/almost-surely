@@ -93,6 +93,3 @@ haven't given it a try, you owe it to yourself to at least experiment with it.
 Here, look, [my entire Neovim setup](https://github.com/nhejazi/myneovimconfig)
 is basically just two scripts!
 
-Maybe I'll make a series of posts about the tools I've been switching over to,
-but, for now, I think that's basically all I wanted to say here, so, cheers.
-

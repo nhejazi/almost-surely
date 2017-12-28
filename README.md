@@ -1,9 +1,12 @@
-# Nima Hejazi's blog
+# Just another statistics blog
 
-> "Almost Surely: musings on statistics and science", a blog by [Nima
-> Hejazi](https://www.nimahejazi.org)
+> "Almost Surely: stochastic musings on statistics and modern science"
 
-Built using the [Hugo](http://gohugo.io/) framework and the
+Source materials for a blog on modern statistics, machine learning, and data
+science, as construed by [Nima Hejazi](https://nimahejazi.org)
+
+Built using the [Hugo](http://gohugo.io/) website generator and
+[RStudio](https://www.rstudio.com/)'s
 [blogdown](https://bookdown.org/yihui/blogdown/) R package. The site is served
 using [Netlify](https://www.netlify.com/).
 
@@ -11,8 +14,8 @@ using [Netlify](https://www.netlify.com/).
 
 ## License
 
-[Nima Hejazi's blog](http://blog.nimahejazi.org/), &copy; 2017-present [Nima S.
-Hejazi](https://www.nimahejazi.org)
+[Nima Hejazi's blog](https://blog.nimahejazi.org/), &copy; 2017-present [Nima S.
+Hejazi](https://nimahejazi.org)
 
 The contents of this repository are released under a <a rel="license"
 href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons

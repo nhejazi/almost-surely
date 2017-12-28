@@ -3,7 +3,7 @@ author = "Nima Hejazi"
 categories = [ "R", "graphics", "not so standard deviations", "data science" ]
 tags = [ "R", "graphics", "data science", "not so standard deviations" ]
 date = "2016-05-02"
-description = "My $0.02 on a popular debate about plotting packages for R"
+description = "My $0.02 on a social media debate on plotting frameworks for R"
 featured = ""
 featuredalt = ""
 featuredpath = ""
@@ -96,7 +96,6 @@ squarely in the realm of _worst practices_, and [worst practices should be
 hard](http://www.haskellforall.com/2016/04/worst-practices-should-be-hard.html)
 (which, to its credit, the base graphics system certainly is).
 
-Anyway, cheers for now – I think I mostly covered everything I had hoped to talk
-about from Jeff Leek's post, but, really, who knows, there might be a follow-up
-post at some point...
+OK, I think I mostly covered everything I had hoped to talk about from Jeff
+Leek's post, but, there might be a follow-up post at some point...
 

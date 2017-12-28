@@ -73,11 +73,7 @@ of struggling with API access issues and re-orienting myself to the use of
 Python for data analysis (currently, I mostly use R for my biostatistical work).
 
 All of the scripts that I produced are [available on GitHub
-here](https://github.com/nhejazi/fitbit). I plan to add more thorough
-analyses to this repo over the next few weeks, assuming I don't get distracted
-by other ongoing work/projects...
-
-Anyway, to any readers (I guess myself in the future at least?), cheers for now
--- I don't think I discussed nearly everything that I set out to talk about, but
-hopefully there will be a follow-up post soon enough.
+here](https://github.com/nhejazi/fitbit). I plan to add several more thorough
+analyses to this repo over the next few weeks -- of course, that's assuming I
+don't get distracted by other ongoing work/projects...
 
