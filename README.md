@@ -3,9 +3,9 @@
 > "Almost Surely: stochastic musings on statistics and modern science"
 
 Source materials for a blog on modern statistics, machine learning, and data
-science, as construed by [Nima Hejazi](https://nimahejazi.org)
+science, as construed by [Nima Hejazi](https://nimahejazi.org).
 
-Built using the [Hugo](http://gohugo.io/) website generator and
+Built using the [Hugo](http://gohugo.io/) website framework and
 [RStudio](https://www.rstudio.com/)'s
 [blogdown](https://bookdown.org/yihui/blogdown/) R package. The site is served
 using [Netlify](https://www.netlify.com/).
