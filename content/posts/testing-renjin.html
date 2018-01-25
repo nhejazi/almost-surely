@@ -19,6 +19,27 @@ output:
 
 ---
 
+---
+author: "Nima Hejazi"
+categories: [ "R", "data science", "statistics", "computing" ]
+tags: [ "R", "data science", "statistics", "computing" ]
+date: "2017-06-29"
+description: "Quick look at using R with some Java 'under the hood'"
+featured: ""
+featuredalt: ""
+featuredpath: ""
+linktitle: ""
+title: "Renjin: put some Java in your R"
+type: "post"
+#comments: true
+disableComments: false
+published: true
+output:
+  blogdown::html_page:
+    toc: false
+
+---
+
 
 
 <p>R is a great, highly flexible language for statistical computing, but it does suffer greatly from performance issues. As I’ve steadily increase my use of R, I quickly became aware that I would have to one day learn to integrate R with a programming language with better performance, the main choice here being C++. To integrate R with C++, the <code>Rcpp</code> framework (and R package) was created, allowing for parts of the R code of a given package or project to be re-written in C++ and easily integrated with R. Using <code>Rcpp</code> comes with great advantages in terms of R code performance; however, it obviously requires that one learn C++. I was about to devote a great deal of time to doing so, when – fortuitously – I came across the rather new <a href="http://www.renjin.org/"><code>renjin</code> project</a>. Renjin is a new (in-development) interpreter for GNU R that relies on the Java Virtual Machine (JVM) to enhance R’s performance. The idea seems to be that it can eventually serve as a drop-in replacement for GNU R. It seems that the <code>renjin</code> R package can be used to provide performance gains via interfacing with the JVM, just by wrapping standard R code.</p>

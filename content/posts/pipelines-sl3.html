@@ -12,7 +12,7 @@ title: "sl3: Machine Learning Pipelines for R"
 type: "post"
 #comments: false
 disableComments: true
-published: true
+published: false
 output:
   blogdown::html_page:
     toc: false
@@ -42,17 +42,17 @@ iris &lt;- iris %&gt;%
 iris</code></pre>
 <pre><code>## # A tibble: 150 x 5
 ##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-##           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;  &lt;fctr&gt;
-##  1          5.1         3.5          1.4         0.2  setosa
-##  2          4.9         3.0          1.4         0.2  setosa
-##  3          4.7         3.2          1.3         0.2  setosa
-##  4          4.6         3.1          1.5         0.2  setosa
-##  5          5.0         3.6          1.4         0.2  setosa
-##  6          5.4         3.9          1.7         0.4  setosa
-##  7          4.6         3.4          1.4         0.3  setosa
-##  8          5.0         3.4          1.5         0.2  setosa
-##  9          4.4         2.9          1.4         0.2  setosa
-## 10          4.9         3.1          1.5         0.1  setosa
+##           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+##  1         5.10        3.50         1.40       0.200 setosa 
+##  2         4.90        3.00         1.40       0.200 setosa 
+##  3         4.70        3.20         1.30       0.200 setosa 
+##  4         4.60        3.10         1.50       0.200 setosa 
+##  5         5.00        3.60         1.40       0.200 setosa 
+##  6         5.40        3.90         1.70       0.400 setosa 
+##  7         4.60        3.40         1.40       0.300 setosa 
+##  8         5.00        3.40         1.50       0.200 setosa 
+##  9         4.40        2.90         1.40       0.200 setosa 
+## 10         4.90        3.10         1.50       0.100 setosa 
 ## # ... with 140 more rows</code></pre>
 <p>…</p>
 <p>To create very simple training and testing splits, we’ll rely on the popular <a href="https://topepo.github.io/caret/index.html"><code>caret</code> R package</a>:</p>
@@ -120,16 +120,16 @@ h2o.init()</code></pre>
 ## H2O is not running yet, starting it now...
 ## 
 ## Note:  In case of errors look at the following log files:
-##     /var/folders/sr/8wdg8m6s5pv211sp22lr5dlw0000gn/T//RtmpNzp5NH/h2o_nimahejazi_started_from_r.out
-##     /var/folders/sr/8wdg8m6s5pv211sp22lr5dlw0000gn/T//RtmpNzp5NH/h2o_nimahejazi_started_from_r.err
+##     /var/folders/sr/8wdg8m6s5pv211sp22lr5dlw0000gn/T//RtmpdhjVZa/h2o_nimahejazi_started_from_r.out
+##     /var/folders/sr/8wdg8m6s5pv211sp22lr5dlw0000gn/T//RtmpdhjVZa/h2o_nimahejazi_started_from_r.err
 ## 
 ## 
-## Starting H2O JVM and connecting: ... Connection successful!
+## Starting H2O JVM and connecting: .... Connection successful!
 ## 
 ## R is connected to the H2O cluster: 
-##     H2O cluster uptime:         3 seconds 54 milliseconds 
+##     H2O cluster uptime:         4 seconds 115 milliseconds 
 ##     H2O cluster version:        3.16.0.2 
-##     H2O cluster version age:    1 month and 2 days  
+##     H2O cluster version age:    1 month and 25 days  
 ##     H2O cluster name:           H2O_started_from_R_nimahejazi_efh185 
 ##     H2O cluster total nodes:    1 
 ##     H2O cluster total memory:   1.78 GB 
