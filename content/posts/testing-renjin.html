@@ -19,33 +19,28 @@ output:
 
 ---
 
----
-author: "Nima Hejazi"
-categories: [ "R", "data science", "statistics", "computing" ]
-tags: [ "R", "data science", "statistics", "computing" ]
-date: "2017-06-29"
-description: "Quick look at using R with some Java 'under the hood'"
-featured: ""
-featuredalt: ""
-featuredpath: ""
-linktitle: ""
-title: "Renjin: put some Java in your R"
-type: "post"
-#comments: true
-disableComments: false
-published: true
-output:
-  blogdown::html_page:
-    toc: false
-
----
 
 
-
-<p>R is a great, highly flexible language for statistical computing, but it does suffer greatly from performance issues. As I’ve steadily increase my use of R, I quickly became aware that I would have to one day learn to integrate R with a programming language with better performance, the main choice here being C++. To integrate R with C++, the <code>Rcpp</code> framework (and R package) was created, allowing for parts of the R code of a given package or project to be re-written in C++ and easily integrated with R. Using <code>Rcpp</code> comes with great advantages in terms of R code performance; however, it obviously requires that one learn C++. I was about to devote a great deal of time to doing so, when – fortuitously – I came across the rather new <a href="http://www.renjin.org/"><code>renjin</code> project</a>. Renjin is a new (in-development) interpreter for GNU R that relies on the Java Virtual Machine (JVM) to enhance R’s performance. The idea seems to be that it can eventually serve as a drop-in replacement for GNU R. It seems that the <code>renjin</code> R package can be used to provide performance gains via interfacing with the JVM, just by wrapping standard R code.</p>
-<section id="minimal-example" class="level2">
+<p>R is a great, highly flexible language for statistical computing, but it does
+suffer greatly from performance issues. As I’ve steadily increase my use of R, I
+quickly became aware that I would have to one day learn to integrate R with a
+programming language with better performance, the main choice here being C++. To
+integrate R with C++, the <code>Rcpp</code> framework (and R package) was created, allowing
+for parts of the R code of a given package or project to be re-written in C++
+and easily integrated with R. Using <code>Rcpp</code> comes with great advantages in terms
+of R code performance; however, it obviously requires that one learn C++. I was
+about to devote a great deal of time to doing so, when – fortuitously – I came
+across the rather new <a href="http://www.renjin.org/"><code>renjin</code> project</a>. Renjin is a
+new (in-development) interpreter for GNU R that relies on the Java Virtual
+Machine (JVM) to enhance R’s performance. The idea seems to be that it can
+eventually serve as a drop-in replacement for GNU R. It seems that the <code>renjin</code>
+R package can be used to provide performance gains via interfacing with the JVM,
+just by wrapping standard R code.</p>
+<div id="minimal-example" class="section level2">
 <h2>Minimal example</h2>
-<p>For now, I just thought I would try the example from the <code>renjin</code> R package documentation, more involved examples might be added to this post later or come in separate blog posts of their own. Here we go:</p>
+<p>For now, I just thought I would try the example from the <code>renjin</code> R package
+documentation, more involved examples might be added to this post later or come
+in separate blog posts of their own. Here we go:</p>
 <p>Let’s make sure we have the newest version of Renjin:</p>
 <pre class="r"><code>if (!require(renjin)) {
 install.packages(&quot;https://nexus.bedatadriven.com/content/groups/public/org/renjin/renjin-gnur-package/0.8.2404/renjin-gnur-package-0.8.2404.tar.gz&quot;)
@@ -60,18 +55,36 @@ install.packages(&quot;https://nexus.bedatadriven.com/content/groups/public/org/
   }
   sum
 }</code></pre>
-<p>We can improve the speed of this function by pre-compiling it to bytecode using R’s native bytecode compiler. We’d expect this to save us some time relative to the naive implementation.</p>
+<p>We can improve the speed of this function by pre-compiling it to bytecode using
+R’s native bytecode compiler. We’d expect this to save us some time relative to
+the naive implementation.</p>
 <pre class="r"><code>bigsumc &lt;- compiler::cmpfun(bigsum) # GNU R&#39;s byte code compiler</code></pre>
-<p>Alright, now we’re ready to compare the performances of the naive and bytecode-compiled implementations:</p>
+<p>Alright, now we’re ready to compare the performances of the naive and
+bytecode-compiled implementations:</p>
 <pre class="r"><code>time_norm &lt;- system.time(bigsum(1e7))
 time_comp &lt;- system.time(bigsumc(1e7))</code></pre>
-<p>Notice that directly using R’s native bytecode compiler improves the performance of our <code>bigsum</code> function quite a bit – that is, considering the time the system spends on the computation, we save about 0 seconds, (roughly) a factor of 1. Maybe <code>renjin</code> can help us out even more?</p>
+<p>Notice that directly using R’s native bytecode compiler improves the performance
+of our <code>bigsum</code> function quite a bit – that is, considering the time the system
+spends on the computation, we save about
+0.01 seconds, (roughly) a factor of
+1. Maybe <code>renjin</code> can help us out even
+more?</p>
 <pre class="r"><code>time_renjin &lt;- system.time(renjin(bigsum(1e7)))</code></pre>
 <pre class="r"><code>print(table)</code></pre>
 <pre><code>##         user system total
-## naive  0.422  0.014 0.441
-## cmpfun 0.430  0.008 0.444
-## renjin 0.430  0.024 0.241</code></pre>
-<p>Wow – just, wow. The gain in computational efficiency here is incredible! Using <code>renjin</code> – even just as a wrapper – improves the time cost (on the system side) by a factor of 1 relative to the naive implementation and by quite a bit still (<strong>a factor of 2</strong>) when compared to the bytecode-compiled version of our function. This was just a simple example, but we were able to save so much computational time just by naively calling <code>renjin</code>…and it took just a few extra characters to call it as a wrapper…</p>
-<p>Although Renjin is still in its infancy, I can’t help but be excited for the future of R – and statistical computing in general – with how well its already performing. We’re going to be able to (try to) do great things with these new tools ✨</p>
-</section>
+## naive  0.424  0.020 0.448
+## cmpfun 0.426  0.007 0.437
+## renjin 0.425  0.027 0.257</code></pre>
+<p>Wow – just, wow. The gain in computational efficiency here is incredible! Using
+<code>renjin</code> – even just as a wrapper – improves the time cost (on the system
+side) by a factor of 1 relative to the
+naive implementation and by quite a bit still (<strong>a factor of
+2</strong>) when compared to the
+bytecode-compiled version of our function. This was just a simple example, but
+we were able to save so much computational time just by naively calling
+<code>renjin</code>…and it took just a few extra characters to call it as a wrapper…</p>
+<p>Although Renjin is still in its infancy, I can’t help but be excited for the
+future of R – and statistical computing in general – with how well its already
+performing. We’re going to be able to (try to) do great things with these new
+tools ✨</p>
+</div>
