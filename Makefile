@@ -13,5 +13,5 @@ serve:
 # make new TITLE="blah blah blah"
 new:
 	Rscript -e "blogdown::new_post(title='\'$(TITLE)\'', author='Nima', rmd=T)"
-	nvim content/post/
+	vim content/post/
 
