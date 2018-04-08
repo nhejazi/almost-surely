@@ -12,7 +12,7 @@ title: "Renjin: put some Java in your R"
 type: "post"
 #comments: true
 disableComments: false
-published: true
+published: false
 output:
   blogdown::html_page:
     toc: false
@@ -47,7 +47,7 @@ in separate blog posts of their own. Here we go:
 
 Let's make sure we have the newest version of Renjin:
 
-```{r install}
+```{r install, eval=FALSE}
 if (!require(renjin)) {
 install.packages("https://nexus.bedatadriven.com/content/groups/public/org/renjin/renjin-gnur-package/0.8.2404/renjin-gnur-package-0.8.2404.tar.gz")
 }
@@ -89,28 +89,26 @@ spends on the computation, we save about
 `r round(time_norm[3] / time_comp[3], 0)`. Maybe `renjin` can help us out even
 more?
 
-```{r renjin}
+```{r renjin, eval=FALSE}
 time_renjin <- system.time(renjin(bigsum(1e7)))
 ```
 
-```{r table-make, echo=FALSE}
+```{r table-make, echo=FALSE, eval=FALSE}
 table <- as.data.frame(rbind(as.numeric(time_norm), as.numeric(time_comp),
                              as.numeric(time_renjin)))[, c(1, 2, 3)]
 colnames(table) <- c("user", "system", "total")
 rownames(table) <- c("naive", "cmpfun", "renjin")
 ```
 
-```{r table-print}
+```{r table-print, eval=FALSE}
 print(table)
 ```
 
-Wow -- just, wow. The gain in computational efficiency here is incredible! Using
-`renjin` -- even just as a wrapper -- improves the time cost (on the system
-side) by a factor of `r round(table[1, 2] / table[3, 2], 0)` relative to the
-naive implementation and by quite a bit still (__a factor of
-`r round(table[2, 3] / table[3, 3], 0)`__) when compared to the
-bytecode-compiled version of our function. This was just a simple example, but
-we were able to save so much computational time just by naively calling
+The gain in computational time here is awesome! Using `renjin` -- even just as a
+wrapper -- improves the time cost (on the system side) by a large factor
+relative to the naive implementation and by quite a bit still when compared to
+the bytecode-compiled version of our function. This was just a simple example,
+but we were able to save so much computational time just by naively calling
 `renjin`...and it took just a few extra characters to call it as a wrapper...
 
 Although Renjin is still in its infancy, I can't help but be excited for the
