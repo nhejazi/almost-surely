@@ -52,7 +52,7 @@ MathJaxVersion = "2.7.1"
     weight = 4
 
 [[menu.main]]
-    url = "https://www.stat.berkeley.edu/~nhejazi/"
+    url = "https://statistics.berkeley.edu/~nhejazi/"
     name = "Academic Site"
     weight = 5
 
