@@ -15,7 +15,7 @@ MathJaxVersion = "2.7.1"
 
 [params]
   author = "Nima Hejazi"
-  description = "Stochastic Musings on Statistics and Modern Science"
+  description = "Stochastic Musings on Statistics, Software, and Science"
   copyright = "© 2017-2018. [Nima Hejazi](https://nimahejazi.org). [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
   githubUsername = "nhejazi"
   #gitlabUsername = "nhejazi"

@@ -1,6 +1,6 @@
 +++
 title = "Almost Surely..."
-description = "Stochastic Musings on Statistics and Modern Science"
+description = "Stochastic Musings on Statistics, Software, and Science"
 type = "static"
 #comments = false
 disableComments = true
@@ -12,16 +12,17 @@ published = true
 expressed on this blog necessarily endorsed by any organization with which I may
 be affiliated._
 
-This blog is dedicated to exploring statistics, science, and their myriad
-interactions in our modern world, as construed loosely by [Nima
+This blog is dedicated to exploring statistics, science, software, and their
+myriad interactions in our modern world, as construed loosely by me, [Nima
 Hejazi](https://nimahejazi.org). The scope is necessarily broad -- hopefully,
-ideas from causal inference, nonparametric statistics, semiparametric theory,
-high-dimensional probability, machine learning, optimization, information
-theory, statistical computing, data science, applied statistics, and
-computational biology will all be explored, though to varying degrees of depth.
-In nearly all cases, the goal of a given post will be to explore the particular
-topic at hand with an eye towards examining the manner in which the statistical
-issue at hand impacts science and policy.
+ideas from statistical causal inference, nonparametric statistics,
+semiparametric theory, high-dimensional probability, machine learning,
+optimization, information theory, statistical computing, data science, applied
+statistics, and computational biology will all be explored -- with the variety
+of topics necessarily explored to varying degrees of depth. The central goal of
+each post will be to explore the relationship between a statistical issue and
+how that issue may impact science and policy. On occasion, posts that diverge
+from the topics above may appear.
 
 _Trivialities:_ Though it emerged rather whimsically, the name of this blog
 merits some explanation -- specifically, the term "almost surely," from the
