@@ -94,5 +94,4 @@ regression fit. Pretty awesome that `blogdown` supports such nice graphics so
 easily. In my old blog, I had to come up with a custom R script to use `knitr`
 to process [R Markdown](http://rmarkdown.rstudio.com/) to standard markdown,
 allowing them to be rendered on my old [Jekyll](https://jekyllrb.com/) blog.
-Glad I never have to do that again `r emo::ji("awesome")`
 
