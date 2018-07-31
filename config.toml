@@ -52,14 +52,9 @@ MathJaxVersion = "2.7.1"
     weight = 4
 
 [[menu.main]]
-    url = "https://statistics.berkeley.edu/~nhejazi/"
-    name = "Academic Site"
-    weight = 5
-
-[[menu.main]]
     url = "https://nimahejazi.org/"
-    name = "Personal Site"
-    weight = 6
+    name = "Personal Homepage"
+    weight = 5
 
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
