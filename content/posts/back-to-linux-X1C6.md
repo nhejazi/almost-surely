@@ -12,18 +12,21 @@ title = "Back to Linux - Adventures with the X1 Carbon"
 type = "post"
 #comments = false
 disableComments = false
-published = false
+published = true
 
 +++
 
 Since starting my adventures in statistics and data science (over the last 5
 years or so), I've spent nearly all of my working time fiddling with Apple's
 macOS -- well, OS X when I started -- machines. After cycling through a couple
-Apple machines, I settled on a [2015 "new" Macbook](), working on which turned
-out to be a disaster. (I mean, battery life of 2 hours, seriously?) Having grown
-fed up with this, I just recently decided to go back to Linux -- and, after some
-careful research, I settled on [Lenovo's 6th-generation X1 Carbon]. For ease of
-use, I decided to go with [Ubuntu 18.04] ("Bionic Beaver") on this machine, and
+Apple machines, I settled on a 2015 "new" (at the time) Macbook, working on
+which turned out to be a disaster. (I mean, battery life of ~3 hours,
+seriously?) Having grown fed up with this, I just recently decided to go back to
+Linux -- and, after some not-so-careful research, I settled on [Lenovo's
+6th-generation X1
+Carbon](https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/ThinkPad-X1-Carbon-6th-Gen/p/20KH002HUS).
+For ease of use, I decided to go with [Ubuntu
+18.04](http://releases.ubuntu.com/18.04/) ("Bionic Beaver") on this machine, and
 so began the trouble and pain of turning the X1 Carbon into a Linux box.
 
 As great a programming/computing experience as my X1 Carbon now offers, there
@@ -53,23 +56,38 @@ Since Ubuntu 18.04 implements kernel updates rather quickly, I've had to go
 through this process ~2 times in the couple months that I've had my X1 Carbon.
 It's easy to see that this process might get rather annoying over time.
 
-https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_6)
+There's a few other oddities that were initially frustrating when getting the X1
+set up, but thanks to the good folks of the
+[Arch](https://www.archlinux.org/) community, there's extremely helpful wiki
+pages that cover pretty much anything you might need to
+tweak: https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_6).
 
-
-## Configuration and Pricing (vs. Apple hardware)
+## Configuration/Pricing (vs. Apple)
 
 Here's just a few important configuration details on my customized X1 Carbon:
 
-* ...
-* ...
-* ...
-* __Price:__ $$
+* Touchscreen: nope
+* Display: 14" WQHD (2560 x 1440) IPS anti-glare, 300 nits
+* Processor: 8th Generation 8-core Intel Core i7-8550U Processor (1.80GHz, up to
+    4.0GHz with Turbo Boost, 8MB Cache)
+* Memory: 16GB LPDDR3 2133MHz (Onboard)
+* Storage: 512GB Solid State Drive PCIe-NVME OPAL2.0 M.2
+* __Price:__ ~$1550 (pre-tax), with frequently available academic discount
 
-The closest thing I could find amongst Apple's products offered these specs:
+The closest thing I could find amongst Apple's products (the new 15-inch
+Macbook Pro) offered these specs:
 
-* ...
-* ...
-* ...
-* __Price:__ $$$
+* Touchbar: why? (mandatory for 15-inch)
+* Display:15.4-inch (diagonal) LED-backlit display with IPS technology;
+    2880-by-1800 native resolution at 220 pixels per inch with support for
+    millions of colors; 500 nits brightness
+* Processor: 2.6GHz 6-core Intel Core i7, Turbo Boost up to 4.3GHz, with 9MB
+    shared L3 cache
+* Memory: 16GB of 2400MHz DDR4 onboard memory
+* Storage: 512GB SSD
+* __Price:__ $2799 (pre-tax)
 
+...All together, escaping the Apple ecosystem and saving ~$1300 is more than
+enough compensation for this small amount of tweaking I've had to do to get the
+X1 Carbon sufficiently set up.
 
