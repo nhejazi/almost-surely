@@ -44,8 +44,8 @@ hardware that Lenovo's producing with the X1 Carbon...
 
 Thankfully, the great folks of the Arch community have put together a patch that
 can be applied to the X1 Carbon to restore the standard S3 sleep state. The
-procedure is very well documented and described in detail
-[here](https://delta-xi.net/#056). Unfortunately, in order to enable the patch
+procedure is very well documented and described in detail in this blog post
+(https://delta-xi.net/#056). Unfortunately, in order to enable the patch
 (the `acpi_override` described in the linked post), it must be manually added to
 the `boot/grub/grub.cfg` file, which itself gets overwritten every time your
 preferred Linux distribution ([Ubuntu](https://www.ubuntu.com/desktop), in my
@@ -58,9 +58,9 @@ It's easy to see that this process might get rather annoying over time.
 
 There's a few other oddities that were initially frustrating when getting the X1
 set up, but thanks to the good folks of the
-[Arch](https://www.archlinux.org/) community, there's extremely helpful wiki
-pages that cover pretty much anything you might need to
-tweak: https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_6).
+[Arch](https://www.archlinux.org/) community, there's an extremely helpful wiki
+page that cover pretty much anything you might feel like tweaking:
+https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_6).
 
 ## Configuration/Pricing (vs. Apple)
 
