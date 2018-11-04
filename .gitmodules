@@ -1,6 +1,3 @@
-[submodule "themes/hugo-future-imperfect"]
-	path = themes/hugo-future-imperfect
-	url = git@github.com:nhejazi/hugo-future-imperfect.git
 [submodule "themes/hugo-minimal"]
 	path = themes/hugo-minimal
 	url = git@github.com:nhejazi/hugo-minimal.git
