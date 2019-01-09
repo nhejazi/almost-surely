@@ -16,7 +16,7 @@ MathJaxVersion = "2.7.1"
 [params]
   author = "Nima Hejazi"
   description = "Stochastic Musings on Statistics, Software, and Science"
-  copyright = "© 2017-2018. [Nima Hejazi](https://nimahejazi.org). [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
+  copyright = "© 2017-2019. [Nima Hejazi](https://nimahejazi.org). [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
   githubUsername = "nhejazi"
   #gitlabUsername = "nhejazi"
   #bitbucketUsername = "nhejazi"
@@ -79,11 +79,6 @@ MathJaxVersion = "2.7.1"
     url = "https://open.spotify.com/user/nhejazi"
     name = "spotify"
     weight = 4
-
-#[[menu.icon]]
-    #url = "https://open.spotify.com/user/nhejazi"
-    #name = "last-fm"
-    #weight = 4
 
 [[menu.icon]]
     url = "https://medium.com/@nshejazi/"
