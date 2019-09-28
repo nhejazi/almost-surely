@@ -1,6 +1,6 @@
 [submodule "themes/hugo-minimal"]
 	path = themes/hugo-minimal
-	url = git@github.com:nhejazi/hugo-minimal.git
+	url = https://github.com/nhejazi/hugo-minimal.git
 [submodule "themes/hugo-kiss"]
 	path = themes/hugo-kiss
-	url = git@github.com:nhejazi/kiss.git
+	url = https://github.com/nhejazi/kiss.git
