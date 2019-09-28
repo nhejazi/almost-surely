@@ -3,4 +3,4 @@
 	url = https://github.com/nhejazi/hugo-minimal.git
 [submodule "themes/hugo-kiss"]
 	path = themes/hugo-kiss
-	url = https://github.com/nhejazi/kiss.git
+	url = https://github.com/nhejazi/hugo-kiss.git
