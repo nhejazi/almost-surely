@@ -1,11 +1,8 @@
 +++
-title = "Almost Surely..."
-description = "Stochastic Musings on Statistics, Software, and Science"
-type = "static"
-#comments = false
+title = "About the Almost Surely blog"
+date = ""
+menu = "main"
 disableComments = true
-published = true
-
 +++
 
 **<u>Disclaimer</u>:** _At no time and under no circumstances are the ideas

@@ -1,0 +1,117 @@
+baseURL = "https://almost-surely.netlify.com/"
+languageCode = "en-us"
+title = "Almost Surely..."
+theme = "hugo-minimal"
+disqusShortname = "nhejazi"
+googleAnalytics = "UA-67244126-3"
+RSSLink = "true"
+toc = "true"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+# custom additions
+enableEmoji = true
+MathJaxCDN = "https://cdn.bootcss.com"
+MathJaxVersion = "2.7.1"
+
+[params]
+  author = "Nima Hejazi"
+  description = "Stochastic Musings on Statistics, Software, and Science"
+  copyright = "© 2017-2019. [Nima Hejazi](https://nimahejazi.org). [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
+  githubUsername = "nhejazi"
+  #gitlabUsername = "nhejazi"
+  #bitbucketUsername = "nhejazi"
+  accent = "black"
+  showBorder = true
+  backgroundColor = "white"
+  font = "Montserrat" # should match the name on Google Fonts!
+  highlight = true
+  highlightStyle = "zenburn"
+  highlightLanguages = ["r", "python", "julia", "cpp", "bash", "zsh"]
+  highlightjsVersion = "9.12.0"
+  highlightjsCDN = "//cdn.bootcss.com"
+  highlightjslang = ["r"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/about/"
+    name = "About"
+    weight = 2
+
+[[menu.main]]
+    url = "/posts/"
+    name = "Posts"
+    weight = 3
+
+[[menu.main]]
+    url = "/tags/"
+    name = "Tags"
+    weight = 4
+
+[[menu.main]]
+    url = "https://nimahejazi.org/"
+    name = "Personal Homepage"
+    weight = 5
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "https://twitter.com/nshejazi/"
+    name = "twitter"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/nhejazi/"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://www.instagram.com/nshejazi/"
+    name = "instagram"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://open.spotify.com/user/nhejazi"
+    name = "spotify"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://medium.com/@nshejazi/"
+    name = "medium"
+    weight = 5
+
+[[menu.icon]]
+    url = "https://www.quora.com/profile/Nima-Hejazi-2/"
+    name = "quora"
+    weight = 6
+
+[[menu.icon]]
+    url = "https://www.reddit.com/user/nshejazi/"
+    name = "reddit-alien"
+    weight = 7
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/nshejazi/"
+    name = "linkedin"
+    weight = 8
+
+[[menu.icon]]
+    url = "https://stackoverflow.com/users/6026746/nhejazi?tab=profile"
+    name = "stack-overflow"
+    weight = 9
+
+[[menu.icon]]
+    url = "mailto:nh@nimahejazi.org"
+    name = "envelope-o"
+    weight = 10
+
+[[menu.icon]]
+    url = "/index.xml"
+    name = "rss"
+    weight = 11
+
