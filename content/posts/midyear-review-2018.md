@@ -12,7 +12,7 @@ title = "2018 - a midyear review"
 type = "post"
 #comments = false
 disableComments = true
-published = true
+published = false
 
 +++
 

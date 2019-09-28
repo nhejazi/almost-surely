@@ -1,11 +1,12 @@
 baseURL = "https://almost-surely.netlify.com/"
 languageCode = "en-us"
 title = "Almost Surely..."
-theme = "hugo-minimal"
+theme = "hugo-kiss"
+copyright = "&copy; <a href=\"https://nimahejazi.org\">Nima Hejazi</a> 2017-2019"
 disqusShortname = "nhejazi"
 googleAnalytics = "UA-67244126-3"
-RSSLink = "true"
-toc = "true"
+Paginate = 5 # Number of posts per page
+enableRobotsTXT = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # custom additions
@@ -13,105 +14,62 @@ enableEmoji = true
 MathJaxCDN = "https://cdn.bootcss.com"
 MathJaxVersion = "2.7.1"
 
-[params]
-  author = "Nima Hejazi"
-  description = "Stochastic Musings on Statistics, Software, and Science"
-  copyright = "© 2017-2019. [Nima Hejazi](https://nimahejazi.org). [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
-  githubUsername = "nhejazi"
-  #gitlabUsername = "nhejazi"
-  #bitbucketUsername = "nhejazi"
-  accent = "black"
-  showBorder = true
-  backgroundColor = "white"
-  font = "Montserrat" # should match the name on Google Fonts!
-  highlight = true
-  highlightStyle = "zenburn"
-  highlightLanguages = ["r", "python", "julia", "cpp", "bash", "zsh"]
-  highlightjsVersion = "9.12.0"
-  highlightjsCDN = "//cdn.bootcss.com"
-  highlightjslang = ["r"]
+[params.rss] # Adding this tag enables RSS feed
+includeContent = true # Includes whole content in rss
+authorName = "Nima Hejazi" # Author full name
+authorEmail = "nh@nimahejazi.org" # Author email
 
-[[menu.main]]
-    url = "/"
-    name = "Home"
-    weight = 1
+[params.assets]
+customCSS = ["css/custom.css"]
 
-[[menu.main]]
-    url = "/about/"
-    name = "About"
-    weight = 2
+[params.info]
+adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "Stochastic Musings on Statistics, Software, and Science" # homepage title
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+codeCopy = true # Add copy button above code blocks
 
-[[menu.main]]
-    url = "/posts/"
-    name = "Posts"
-    weight = 3
+[params.features]
+disqusOnDemand = true  # Load Disqus comments on click
 
-[[menu.main]]
-    url = "/tags/"
-    name = "Tags"
-    weight = 4
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = ""
+pageID = ""
 
-[[menu.main]]
-    url = "https://nimahejazi.org/"
-    name = "Personal Homepage"
-    weight = 5
+[params.opengraph.twitter]
+page = "" # Twitter Page username. If not set, params.social.twitter will be used.
 
-# Social icons to be shown on the right-hand side of the navigation bar
-# The "name" field should match the name of the icon to be used
-# The list of available icons can be found at http://fontawesome.io/icons/
+[params.social]
+twitter = "nshejazi"
+github = "nhejazi"
+email = "nh@nimahejazi.org"
+linkedin = "nshejazi"
+facebook = ""
+instagram = ""
+codepen = ""
+rss = "index.xml" # Add this to show RSS button in social.
 
-[[menu.icon]]
-    url = "https://twitter.com/nshejazi/"
-    name = "twitter"
-    weight = 1
+[params.social.config]
+platforms = ["github","twitter","email","linkedin"]
 
-[[menu.icon]]
-    url = "https://github.com/nhejazi/"
-    name = "github"
-    weight = 2
+[params.sections_left]
+"/about" = "About the blog"
+#"https://example.com" = "Example"
 
-[[menu.icon]]
-    url = "https://www.instagram.com/nshejazi/"
-    name = "instagram"
-    weight = 3
+[params.sections_right]
+"https://nimahejazi.org" = "Nima's webpage"
 
-[[menu.icon]]
-    url = "https://open.spotify.com/user/nhejazi"
-    name = "spotify"
-    weight = 4
+[params.matomoAnalytics]
+siteID = 1
+rootURL = ""
 
-[[menu.icon]]
-    url = "https://medium.com/@nshejazi/"
-    name = "medium"
-    weight = 5
+[params.fathomAnalytics]
+rootURL = ""
 
-[[menu.icon]]
-    url = "https://www.quora.com/profile/Nima-Hejazi-2/"
-    name = "quora"
-    weight = 6
+[taxonomies]
+tag ="tags"
 
-[[menu.icon]]
-    url = "https://www.reddit.com/user/nshejazi/"
-    name = "reddit-alien"
-    weight = 7
-
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/nshejazi/"
-    name = "linkedin"
-    weight = 8
-
-[[menu.icon]]
-    url = "https://stackoverflow.com/users/6026746/nhejazi?tab=profile"
-    name = "stack-overflow"
-    weight = 9
-
-[[menu.icon]]
-    url = "mailto:nh@nimahejazi.org"
-    name = "envelope-o"
-    weight = 10
-
-[[menu.icon]]
-    url = "/index.xml"
-    name = "rss"
-    weight = 11
-
+[blackfriday]
+hrefTargetBlank = true
