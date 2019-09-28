@@ -9,11 +9,6 @@ Paginate = 5 # Number of posts per page
 enableRobotsTXT = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-# custom additions
-enableEmoji = true
-MathJaxCDN = "https://cdn.bootcss.com"
-MathJaxVersion = "2.7.1"
-
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
 authorName = "Nima Hejazi" # Author full name
