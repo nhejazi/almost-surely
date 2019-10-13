@@ -54,7 +54,7 @@ platforms = ["github","twitter","email","linkedin"]
 #"https://example.com" = "Example"
 
 [params.sections_right]
-"https://nimahejazi.org" = "Nima's webpage"
+"https://nimahejazi.org" = "Nima's homepage"
 
 [params.matomoAnalytics]
 siteID = 1
