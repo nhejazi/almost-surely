@@ -2,7 +2,7 @@
 author: "Nima Hejazi"
 categories: [ "causal inference", "statistics", "machine learning"]
 tags: [ "causal inference", "statistics", "machine learning"]
-date = "2021-03-01"
+date: "2021-03-01"
 description: "An introductory take on causal mediation analysis"
 featured: ""
 featuredalt: ""
