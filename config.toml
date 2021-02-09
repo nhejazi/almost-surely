@@ -1,8 +1,8 @@
 baseURL = "https://almost-surely.netlify.com/"
 languageCode = "en-us"
-title = "Almost Surely..."
+title = "Almost Surely?"
 theme = "hugo-kiss"
-copyright = "&copy; <a href=\"https://nimahejazi.org\">Nima Hejazi</a> 2017-2019"
+copyright = "&copy; <a href=\"https://nimahejazi.org\">Nima Hejazi</a> 2017-2021"
 disqusShortname = "nhejazi"
 googleAnalytics = "UA-67244126-3"
 Paginate = 5 # Number of posts per page
@@ -42,15 +42,15 @@ github = "nhejazi"
 email = "nh@nimahejazi.org"
 linkedin = "nshejazi"
 facebook = ""
-instagram = ""
+instagram = "nshejazi"
 codepen = ""
 rss = "index.xml" # Add this to show RSS button in social.
 
 [params.social.config]
-platforms = ["github","twitter","email","linkedin"]
+platforms = ["github","twitter","instagram","linkedin","email"]
 
 [params.sections_left]
-"/about" = "About the blog"
+"/about" = "This blog is about..."
 #"https://example.com" = "Example"
 
 [params.sections_right]
